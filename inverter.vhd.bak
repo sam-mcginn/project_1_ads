@@ -1,0 +1,16 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity inverter is
+	port (
+		input: in std_logic;
+		output: out std_logic;
+end entity inverter;
+
+architecture inverter_arch of inverter is
+	if input='0'
+		output := '1'
+	else
+		output := '0'
+end architecture inverter_arch

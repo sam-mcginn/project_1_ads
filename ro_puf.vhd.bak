@@ -1,0 +1,22 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+-- ring oscillator physical unclonable function
+entity ro_puf is
+	generic (
+		-- RO chain length
+		ro_length: natural := 12;
+		-- Number of RO chains
+		ro_count: natural := 16		-- FIX - check that ro_count = power of two
+	);
+	port (
+		-- Asynchronous active-low reset for counters
+		reset: in std_logic;
+		-- Active-high counters enable signal
+		enable: in std_logic;
+		-- PUF challenge input
+		challenge: in std_logic_vector(7 downto 0); -- FIX - need ro_count/2 -1 downto 0?
+		-- PUT response output
+	);
+end entity ro_puf;

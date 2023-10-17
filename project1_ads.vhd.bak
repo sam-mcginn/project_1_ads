@@ -1,0 +1,25 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity project1_ads is
+	generic (
+		-- FIX - default values ?
+		
+		-- Frequency of FPGA's clock (in Hz)
+		clock_freq: natural :=10;
+		-- Time to pass before probing response  of ro_puf entity (in us)
+		probe_delay: positive := 10;
+		-- RO chain length
+		ro_length: natural := 12;
+		-- number of RO chains
+		ro_count: natural := 8
+	);
+	port (
+		-- Asynchronous active-low reset for control unit
+		reset: in std_logic;
+		-- FPGA clock
+		clock: in std_logic;
+		-- Active-high done signal
+		done: out std_logic;
+	);
+end entity project1_ads;

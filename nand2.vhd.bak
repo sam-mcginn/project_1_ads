@@ -1,0 +1,19 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity nand2 is
+	port (
+		a: in std_logic;
+		b: in std_logic;
+		output: std_logic
+end entity nand2;
+
+architecture nand2_arch of nand2 is
+	if a='1' and b='1' then
+		output='0'
+	else
+		output='1'
+	endif;
+	
+end architecture nand2_arch
