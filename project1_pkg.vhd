@@ -37,7 +37,9 @@ package project1_pkg is
 			-- RO chain length
 			ro_length: natural := 12;
 			-- Number of RO chains
-			ro_count: natural := 16		-- FIX - check that ro_count = power of two
+			ro_count: natural := 16;
+			-- Challenge bit width
+			challenge_bit_width: natural := 8
 		);
 		port (
 			-- Asynchronous active-low reset for counters
@@ -45,7 +47,7 @@ package project1_pkg is
 			-- Active-high counters enable signal
 			enable: in std_logic;
 			-- PUF challenge input
-			challenge: in std_logic_vector(7 downto 0); -- FIX - need ro_count/2 -1 downto 0?
+			challenge: in std_logic_vector(challenge_bit_width downto 0); -- FIX - need ro_count/2 -1 downto 0?
 			-- PUF response output
 			response: out std_logic
 		);
@@ -64,7 +66,34 @@ package project1_pkg is
 		);
 	end component counter;
 	
-	
+	component control_unit is
+		generic (
+			-- Frequency of FPGA's clock (in MHz):
+			clock_freq: natural := 50;
+			-- Time to pass before probing response  of ro_puf entity (in us):
+			probe_delay: positive := 500;
+			-- Challenge input size
+			challenge_bits: positive := 6
+		);
+		port (
+			-- System reset:
+			sys_reset: in std_logic;
+			-- System enable:
+			sys_enable: in std_logic;
+			-- FPGA clock:
+			clock: in std_logic;
+			-- Active-high done signal:
+			done: out std_logic;
+			-- Asynchronous active-low reset from control unit to counters:
+			puf_reset: out std_logic;
+			-- Enable signal from control unit to counters:
+			puf_enable: out std_logic;
+			-- Count output from control unit to counters:
+			challenge_out: out std_logic_vector(0 to challenge_bits);
+			-- Response output to store
+			store_response: out std_logic
+		);
+	end component control_unit;
 	
 end package project1_pkg;
 

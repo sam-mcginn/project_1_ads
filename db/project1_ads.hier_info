@@ -1,0 +1,3157 @@
+|project1_ads
+reset <= reset.DB_MAX_OUTPUT_PORT_TYPE
+clock => ~NO_FANOUT~
+done <= done.DB_MAX_OUTPUT_PORT_TYPE
+top_enable <= comb.DB_MAX_OUTPUT_PORT_TYPE
+counts_en => ro_puf:my_ro_puf.enable
+counts_reset => ro_puf:my_ro_puf.reset
+
+
+|project1_ads|ro_puf:my_ro_puf
+reset => counter:ro_chain:0:count0.count_reset
+reset => counter:ro_chain:1:count0.count_reset
+reset => counter:ro_chain:2:count0.count_reset
+reset => counter:ro_chain:3:count0.count_reset
+reset => counter:ro_chain:4:count0.count_reset
+reset => counter:ro_chain:5:count0.count_reset
+reset => counter:ro_chain:6:count0.count_reset
+reset => counter:ro_chain:7:count0.count_reset
+reset => counter:ro_chain:8:count0.count_reset
+reset => counter:ro_chain:9:count0.count_reset
+reset => counter:ro_chain:10:count0.count_reset
+reset => counter:ro_chain:11:count0.count_reset
+reset => counter:ro_chain:12:count0.count_reset
+reset => counter:ro_chain:13:count0.count_reset
+reset => counter:ro_chain:14:count0.count_reset
+reset => counter:ro_chain:15:count0.count_reset
+enable => ring_oscillator:ro_chain:0:ro0.ro_enable
+enable => counter:ro_chain:0:count0.count_enable
+enable => ring_oscillator:ro_chain:1:ro0.ro_enable
+enable => counter:ro_chain:1:count0.count_enable
+enable => ring_oscillator:ro_chain:2:ro0.ro_enable
+enable => counter:ro_chain:2:count0.count_enable
+enable => ring_oscillator:ro_chain:3:ro0.ro_enable
+enable => counter:ro_chain:3:count0.count_enable
+enable => ring_oscillator:ro_chain:4:ro0.ro_enable
+enable => counter:ro_chain:4:count0.count_enable
+enable => ring_oscillator:ro_chain:5:ro0.ro_enable
+enable => counter:ro_chain:5:count0.count_enable
+enable => ring_oscillator:ro_chain:6:ro0.ro_enable
+enable => counter:ro_chain:6:count0.count_enable
+enable => ring_oscillator:ro_chain:7:ro0.ro_enable
+enable => counter:ro_chain:7:count0.count_enable
+enable => ring_oscillator:ro_chain:8:ro0.ro_enable
+enable => counter:ro_chain:8:count0.count_enable
+enable => ring_oscillator:ro_chain:9:ro0.ro_enable
+enable => counter:ro_chain:9:count0.count_enable
+enable => ring_oscillator:ro_chain:10:ro0.ro_enable
+enable => counter:ro_chain:10:count0.count_enable
+enable => ring_oscillator:ro_chain:11:ro0.ro_enable
+enable => counter:ro_chain:11:count0.count_enable
+enable => ring_oscillator:ro_chain:12:ro0.ro_enable
+enable => counter:ro_chain:12:count0.count_enable
+enable => ring_oscillator:ro_chain:13:ro0.ro_enable
+enable => counter:ro_chain:13:count0.count_enable
+enable => ring_oscillator:ro_chain:14:ro0.ro_enable
+enable => counter:ro_chain:14:count0.count_enable
+enable => ring_oscillator:ro_chain:15:ro0.ro_enable
+enable => counter:ro_chain:15:count0.count_enable
+challenge[0] => ~NO_FANOUT~
+challenge[1] => ~NO_FANOUT~
+challenge[2] => ~NO_FANOUT~
+challenge[3] => ~NO_FANOUT~
+challenge[4] => ~NO_FANOUT~
+challenge[5] => ~NO_FANOUT~
+challenge[6] => ~NO_FANOUT~
+challenge[7] => ~NO_FANOUT~
+response <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:0:ro0
+ro_enable => my_nand2:nand_stage.a
+ro_out <= my_inverter:inverter_chain:10:u0.output
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:0:ro0|my_nand2:nand_stage
+a => nand_gate.IN0
+b => nand_gate.IN1
+output <= nand_gate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:0:ro0|my_inverter:\inverter_chain:0:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:0:ro0|my_inverter:\inverter_chain:1:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:0:ro0|my_inverter:\inverter_chain:2:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:0:ro0|my_inverter:\inverter_chain:3:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:0:ro0|my_inverter:\inverter_chain:4:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:0:ro0|my_inverter:\inverter_chain:5:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:0:ro0|my_inverter:\inverter_chain:6:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:0:ro0|my_inverter:\inverter_chain:7:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:0:ro0|my_inverter:\inverter_chain:8:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:0:ro0|my_inverter:\inverter_chain:9:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:0:ro0|my_inverter:\inverter_chain:10:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|counter:\ro_chain:0:count0
+count_reset => store[0].ACLR
+count_reset => store[1].ACLR
+count_reset => store[2].ACLR
+count_reset => store[3].ACLR
+count_reset => store[4].ACLR
+count_reset => store[5].ACLR
+count_reset => store[6].ACLR
+count_reset => store[7].ACLR
+count_reset => store[8].ACLR
+count_reset => store[9].ACLR
+count_reset => store[10].ACLR
+count_reset => store[11].ACLR
+count_reset => store[12].ACLR
+count_reset => store[13].ACLR
+count_reset => store[14].ACLR
+count_reset => store[15].ACLR
+count_reset => store[16].ACLR
+count_reset => store[17].ACLR
+count_reset => store[18].ACLR
+count_reset => store[19].ACLR
+count_reset => store[20].ACLR
+count_reset => store[21].ACLR
+count_reset => store[22].ACLR
+count_reset => store[23].ACLR
+count_reset => store[24].ACLR
+count_reset => store[25].ACLR
+count_reset => store[26].ACLR
+count_reset => store[27].ACLR
+count_reset => store[28].ACLR
+count_reset => store[29].ACLR
+count_reset => store[30].ACLR
+count_enable => store[0].ENA
+count_enable => store[1].ENA
+count_enable => store[2].ENA
+count_enable => store[3].ENA
+count_enable => store[4].ENA
+count_enable => store[5].ENA
+count_enable => store[6].ENA
+count_enable => store[7].ENA
+count_enable => store[8].ENA
+count_enable => store[9].ENA
+count_enable => store[10].ENA
+count_enable => store[11].ENA
+count_enable => store[12].ENA
+count_enable => store[13].ENA
+count_enable => store[14].ENA
+count_enable => store[15].ENA
+count_enable => store[16].ENA
+count_enable => store[17].ENA
+count_enable => store[18].ENA
+count_enable => store[19].ENA
+count_enable => store[20].ENA
+count_enable => store[21].ENA
+count_enable => store[22].ENA
+count_enable => store[23].ENA
+count_enable => store[24].ENA
+count_enable => store[25].ENA
+count_enable => store[26].ENA
+count_enable => store[27].ENA
+count_enable => store[28].ENA
+count_enable => store[29].ENA
+count_enable => store[30].ENA
+count_input => store[0].CLK
+count_input => store[1].CLK
+count_input => store[2].CLK
+count_input => store[3].CLK
+count_input => store[4].CLK
+count_input => store[5].CLK
+count_input => store[6].CLK
+count_input => store[7].CLK
+count_input => store[8].CLK
+count_input => store[9].CLK
+count_input => store[10].CLK
+count_input => store[11].CLK
+count_input => store[12].CLK
+count_input => store[13].CLK
+count_input => store[14].CLK
+count_input => store[15].CLK
+count_input => store[16].CLK
+count_input => store[17].CLK
+count_input => store[18].CLK
+count_input => store[19].CLK
+count_input => store[20].CLK
+count_input => store[21].CLK
+count_input => store[22].CLK
+count_input => store[23].CLK
+count_input => store[24].CLK
+count_input => store[25].CLK
+count_input => store[26].CLK
+count_input => store[27].CLK
+count_input => store[28].CLK
+count_input => store[29].CLK
+count_input => store[30].CLK
+count_output[0] <= store[0].DB_MAX_OUTPUT_PORT_TYPE
+count_output[1] <= store[1].DB_MAX_OUTPUT_PORT_TYPE
+count_output[2] <= store[2].DB_MAX_OUTPUT_PORT_TYPE
+count_output[3] <= store[3].DB_MAX_OUTPUT_PORT_TYPE
+count_output[4] <= store[4].DB_MAX_OUTPUT_PORT_TYPE
+count_output[5] <= store[5].DB_MAX_OUTPUT_PORT_TYPE
+count_output[6] <= store[6].DB_MAX_OUTPUT_PORT_TYPE
+count_output[7] <= store[7].DB_MAX_OUTPUT_PORT_TYPE
+count_output[8] <= store[8].DB_MAX_OUTPUT_PORT_TYPE
+count_output[9] <= store[9].DB_MAX_OUTPUT_PORT_TYPE
+count_output[10] <= store[10].DB_MAX_OUTPUT_PORT_TYPE
+count_output[11] <= store[11].DB_MAX_OUTPUT_PORT_TYPE
+count_output[12] <= store[12].DB_MAX_OUTPUT_PORT_TYPE
+count_output[13] <= store[13].DB_MAX_OUTPUT_PORT_TYPE
+count_output[14] <= store[14].DB_MAX_OUTPUT_PORT_TYPE
+count_output[15] <= store[15].DB_MAX_OUTPUT_PORT_TYPE
+count_output[16] <= store[16].DB_MAX_OUTPUT_PORT_TYPE
+count_output[17] <= store[17].DB_MAX_OUTPUT_PORT_TYPE
+count_output[18] <= store[18].DB_MAX_OUTPUT_PORT_TYPE
+count_output[19] <= store[19].DB_MAX_OUTPUT_PORT_TYPE
+count_output[20] <= store[20].DB_MAX_OUTPUT_PORT_TYPE
+count_output[21] <= store[21].DB_MAX_OUTPUT_PORT_TYPE
+count_output[22] <= store[22].DB_MAX_OUTPUT_PORT_TYPE
+count_output[23] <= store[23].DB_MAX_OUTPUT_PORT_TYPE
+count_output[24] <= store[24].DB_MAX_OUTPUT_PORT_TYPE
+count_output[25] <= store[25].DB_MAX_OUTPUT_PORT_TYPE
+count_output[26] <= store[26].DB_MAX_OUTPUT_PORT_TYPE
+count_output[27] <= store[27].DB_MAX_OUTPUT_PORT_TYPE
+count_output[28] <= store[28].DB_MAX_OUTPUT_PORT_TYPE
+count_output[29] <= store[29].DB_MAX_OUTPUT_PORT_TYPE
+count_output[30] <= store[30].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:1:ro0
+ro_enable => my_nand2:nand_stage.a
+ro_out <= my_inverter:inverter_chain:10:u0.output
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:1:ro0|my_nand2:nand_stage
+a => nand_gate.IN0
+b => nand_gate.IN1
+output <= nand_gate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:1:ro0|my_inverter:\inverter_chain:0:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:1:ro0|my_inverter:\inverter_chain:1:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:1:ro0|my_inverter:\inverter_chain:2:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:1:ro0|my_inverter:\inverter_chain:3:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:1:ro0|my_inverter:\inverter_chain:4:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:1:ro0|my_inverter:\inverter_chain:5:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:1:ro0|my_inverter:\inverter_chain:6:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:1:ro0|my_inverter:\inverter_chain:7:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:1:ro0|my_inverter:\inverter_chain:8:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:1:ro0|my_inverter:\inverter_chain:9:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:1:ro0|my_inverter:\inverter_chain:10:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|counter:\ro_chain:1:count0
+count_reset => store[0].ACLR
+count_reset => store[1].ACLR
+count_reset => store[2].ACLR
+count_reset => store[3].ACLR
+count_reset => store[4].ACLR
+count_reset => store[5].ACLR
+count_reset => store[6].ACLR
+count_reset => store[7].ACLR
+count_reset => store[8].ACLR
+count_reset => store[9].ACLR
+count_reset => store[10].ACLR
+count_reset => store[11].ACLR
+count_reset => store[12].ACLR
+count_reset => store[13].ACLR
+count_reset => store[14].ACLR
+count_reset => store[15].ACLR
+count_reset => store[16].ACLR
+count_reset => store[17].ACLR
+count_reset => store[18].ACLR
+count_reset => store[19].ACLR
+count_reset => store[20].ACLR
+count_reset => store[21].ACLR
+count_reset => store[22].ACLR
+count_reset => store[23].ACLR
+count_reset => store[24].ACLR
+count_reset => store[25].ACLR
+count_reset => store[26].ACLR
+count_reset => store[27].ACLR
+count_reset => store[28].ACLR
+count_reset => store[29].ACLR
+count_reset => store[30].ACLR
+count_enable => store[0].ENA
+count_enable => store[1].ENA
+count_enable => store[2].ENA
+count_enable => store[3].ENA
+count_enable => store[4].ENA
+count_enable => store[5].ENA
+count_enable => store[6].ENA
+count_enable => store[7].ENA
+count_enable => store[8].ENA
+count_enable => store[9].ENA
+count_enable => store[10].ENA
+count_enable => store[11].ENA
+count_enable => store[12].ENA
+count_enable => store[13].ENA
+count_enable => store[14].ENA
+count_enable => store[15].ENA
+count_enable => store[16].ENA
+count_enable => store[17].ENA
+count_enable => store[18].ENA
+count_enable => store[19].ENA
+count_enable => store[20].ENA
+count_enable => store[21].ENA
+count_enable => store[22].ENA
+count_enable => store[23].ENA
+count_enable => store[24].ENA
+count_enable => store[25].ENA
+count_enable => store[26].ENA
+count_enable => store[27].ENA
+count_enable => store[28].ENA
+count_enable => store[29].ENA
+count_enable => store[30].ENA
+count_input => store[0].CLK
+count_input => store[1].CLK
+count_input => store[2].CLK
+count_input => store[3].CLK
+count_input => store[4].CLK
+count_input => store[5].CLK
+count_input => store[6].CLK
+count_input => store[7].CLK
+count_input => store[8].CLK
+count_input => store[9].CLK
+count_input => store[10].CLK
+count_input => store[11].CLK
+count_input => store[12].CLK
+count_input => store[13].CLK
+count_input => store[14].CLK
+count_input => store[15].CLK
+count_input => store[16].CLK
+count_input => store[17].CLK
+count_input => store[18].CLK
+count_input => store[19].CLK
+count_input => store[20].CLK
+count_input => store[21].CLK
+count_input => store[22].CLK
+count_input => store[23].CLK
+count_input => store[24].CLK
+count_input => store[25].CLK
+count_input => store[26].CLK
+count_input => store[27].CLK
+count_input => store[28].CLK
+count_input => store[29].CLK
+count_input => store[30].CLK
+count_output[0] <= store[0].DB_MAX_OUTPUT_PORT_TYPE
+count_output[1] <= store[1].DB_MAX_OUTPUT_PORT_TYPE
+count_output[2] <= store[2].DB_MAX_OUTPUT_PORT_TYPE
+count_output[3] <= store[3].DB_MAX_OUTPUT_PORT_TYPE
+count_output[4] <= store[4].DB_MAX_OUTPUT_PORT_TYPE
+count_output[5] <= store[5].DB_MAX_OUTPUT_PORT_TYPE
+count_output[6] <= store[6].DB_MAX_OUTPUT_PORT_TYPE
+count_output[7] <= store[7].DB_MAX_OUTPUT_PORT_TYPE
+count_output[8] <= store[8].DB_MAX_OUTPUT_PORT_TYPE
+count_output[9] <= store[9].DB_MAX_OUTPUT_PORT_TYPE
+count_output[10] <= store[10].DB_MAX_OUTPUT_PORT_TYPE
+count_output[11] <= store[11].DB_MAX_OUTPUT_PORT_TYPE
+count_output[12] <= store[12].DB_MAX_OUTPUT_PORT_TYPE
+count_output[13] <= store[13].DB_MAX_OUTPUT_PORT_TYPE
+count_output[14] <= store[14].DB_MAX_OUTPUT_PORT_TYPE
+count_output[15] <= store[15].DB_MAX_OUTPUT_PORT_TYPE
+count_output[16] <= store[16].DB_MAX_OUTPUT_PORT_TYPE
+count_output[17] <= store[17].DB_MAX_OUTPUT_PORT_TYPE
+count_output[18] <= store[18].DB_MAX_OUTPUT_PORT_TYPE
+count_output[19] <= store[19].DB_MAX_OUTPUT_PORT_TYPE
+count_output[20] <= store[20].DB_MAX_OUTPUT_PORT_TYPE
+count_output[21] <= store[21].DB_MAX_OUTPUT_PORT_TYPE
+count_output[22] <= store[22].DB_MAX_OUTPUT_PORT_TYPE
+count_output[23] <= store[23].DB_MAX_OUTPUT_PORT_TYPE
+count_output[24] <= store[24].DB_MAX_OUTPUT_PORT_TYPE
+count_output[25] <= store[25].DB_MAX_OUTPUT_PORT_TYPE
+count_output[26] <= store[26].DB_MAX_OUTPUT_PORT_TYPE
+count_output[27] <= store[27].DB_MAX_OUTPUT_PORT_TYPE
+count_output[28] <= store[28].DB_MAX_OUTPUT_PORT_TYPE
+count_output[29] <= store[29].DB_MAX_OUTPUT_PORT_TYPE
+count_output[30] <= store[30].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:2:ro0
+ro_enable => my_nand2:nand_stage.a
+ro_out <= my_inverter:inverter_chain:10:u0.output
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:2:ro0|my_nand2:nand_stage
+a => nand_gate.IN0
+b => nand_gate.IN1
+output <= nand_gate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:2:ro0|my_inverter:\inverter_chain:0:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:2:ro0|my_inverter:\inverter_chain:1:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:2:ro0|my_inverter:\inverter_chain:2:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:2:ro0|my_inverter:\inverter_chain:3:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:2:ro0|my_inverter:\inverter_chain:4:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:2:ro0|my_inverter:\inverter_chain:5:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:2:ro0|my_inverter:\inverter_chain:6:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:2:ro0|my_inverter:\inverter_chain:7:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:2:ro0|my_inverter:\inverter_chain:8:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:2:ro0|my_inverter:\inverter_chain:9:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:2:ro0|my_inverter:\inverter_chain:10:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|counter:\ro_chain:2:count0
+count_reset => store[0].ACLR
+count_reset => store[1].ACLR
+count_reset => store[2].ACLR
+count_reset => store[3].ACLR
+count_reset => store[4].ACLR
+count_reset => store[5].ACLR
+count_reset => store[6].ACLR
+count_reset => store[7].ACLR
+count_reset => store[8].ACLR
+count_reset => store[9].ACLR
+count_reset => store[10].ACLR
+count_reset => store[11].ACLR
+count_reset => store[12].ACLR
+count_reset => store[13].ACLR
+count_reset => store[14].ACLR
+count_reset => store[15].ACLR
+count_reset => store[16].ACLR
+count_reset => store[17].ACLR
+count_reset => store[18].ACLR
+count_reset => store[19].ACLR
+count_reset => store[20].ACLR
+count_reset => store[21].ACLR
+count_reset => store[22].ACLR
+count_reset => store[23].ACLR
+count_reset => store[24].ACLR
+count_reset => store[25].ACLR
+count_reset => store[26].ACLR
+count_reset => store[27].ACLR
+count_reset => store[28].ACLR
+count_reset => store[29].ACLR
+count_reset => store[30].ACLR
+count_enable => store[0].ENA
+count_enable => store[1].ENA
+count_enable => store[2].ENA
+count_enable => store[3].ENA
+count_enable => store[4].ENA
+count_enable => store[5].ENA
+count_enable => store[6].ENA
+count_enable => store[7].ENA
+count_enable => store[8].ENA
+count_enable => store[9].ENA
+count_enable => store[10].ENA
+count_enable => store[11].ENA
+count_enable => store[12].ENA
+count_enable => store[13].ENA
+count_enable => store[14].ENA
+count_enable => store[15].ENA
+count_enable => store[16].ENA
+count_enable => store[17].ENA
+count_enable => store[18].ENA
+count_enable => store[19].ENA
+count_enable => store[20].ENA
+count_enable => store[21].ENA
+count_enable => store[22].ENA
+count_enable => store[23].ENA
+count_enable => store[24].ENA
+count_enable => store[25].ENA
+count_enable => store[26].ENA
+count_enable => store[27].ENA
+count_enable => store[28].ENA
+count_enable => store[29].ENA
+count_enable => store[30].ENA
+count_input => store[0].CLK
+count_input => store[1].CLK
+count_input => store[2].CLK
+count_input => store[3].CLK
+count_input => store[4].CLK
+count_input => store[5].CLK
+count_input => store[6].CLK
+count_input => store[7].CLK
+count_input => store[8].CLK
+count_input => store[9].CLK
+count_input => store[10].CLK
+count_input => store[11].CLK
+count_input => store[12].CLK
+count_input => store[13].CLK
+count_input => store[14].CLK
+count_input => store[15].CLK
+count_input => store[16].CLK
+count_input => store[17].CLK
+count_input => store[18].CLK
+count_input => store[19].CLK
+count_input => store[20].CLK
+count_input => store[21].CLK
+count_input => store[22].CLK
+count_input => store[23].CLK
+count_input => store[24].CLK
+count_input => store[25].CLK
+count_input => store[26].CLK
+count_input => store[27].CLK
+count_input => store[28].CLK
+count_input => store[29].CLK
+count_input => store[30].CLK
+count_output[0] <= store[0].DB_MAX_OUTPUT_PORT_TYPE
+count_output[1] <= store[1].DB_MAX_OUTPUT_PORT_TYPE
+count_output[2] <= store[2].DB_MAX_OUTPUT_PORT_TYPE
+count_output[3] <= store[3].DB_MAX_OUTPUT_PORT_TYPE
+count_output[4] <= store[4].DB_MAX_OUTPUT_PORT_TYPE
+count_output[5] <= store[5].DB_MAX_OUTPUT_PORT_TYPE
+count_output[6] <= store[6].DB_MAX_OUTPUT_PORT_TYPE
+count_output[7] <= store[7].DB_MAX_OUTPUT_PORT_TYPE
+count_output[8] <= store[8].DB_MAX_OUTPUT_PORT_TYPE
+count_output[9] <= store[9].DB_MAX_OUTPUT_PORT_TYPE
+count_output[10] <= store[10].DB_MAX_OUTPUT_PORT_TYPE
+count_output[11] <= store[11].DB_MAX_OUTPUT_PORT_TYPE
+count_output[12] <= store[12].DB_MAX_OUTPUT_PORT_TYPE
+count_output[13] <= store[13].DB_MAX_OUTPUT_PORT_TYPE
+count_output[14] <= store[14].DB_MAX_OUTPUT_PORT_TYPE
+count_output[15] <= store[15].DB_MAX_OUTPUT_PORT_TYPE
+count_output[16] <= store[16].DB_MAX_OUTPUT_PORT_TYPE
+count_output[17] <= store[17].DB_MAX_OUTPUT_PORT_TYPE
+count_output[18] <= store[18].DB_MAX_OUTPUT_PORT_TYPE
+count_output[19] <= store[19].DB_MAX_OUTPUT_PORT_TYPE
+count_output[20] <= store[20].DB_MAX_OUTPUT_PORT_TYPE
+count_output[21] <= store[21].DB_MAX_OUTPUT_PORT_TYPE
+count_output[22] <= store[22].DB_MAX_OUTPUT_PORT_TYPE
+count_output[23] <= store[23].DB_MAX_OUTPUT_PORT_TYPE
+count_output[24] <= store[24].DB_MAX_OUTPUT_PORT_TYPE
+count_output[25] <= store[25].DB_MAX_OUTPUT_PORT_TYPE
+count_output[26] <= store[26].DB_MAX_OUTPUT_PORT_TYPE
+count_output[27] <= store[27].DB_MAX_OUTPUT_PORT_TYPE
+count_output[28] <= store[28].DB_MAX_OUTPUT_PORT_TYPE
+count_output[29] <= store[29].DB_MAX_OUTPUT_PORT_TYPE
+count_output[30] <= store[30].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:3:ro0
+ro_enable => my_nand2:nand_stage.a
+ro_out <= my_inverter:inverter_chain:10:u0.output
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:3:ro0|my_nand2:nand_stage
+a => nand_gate.IN0
+b => nand_gate.IN1
+output <= nand_gate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:3:ro0|my_inverter:\inverter_chain:0:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:3:ro0|my_inverter:\inverter_chain:1:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:3:ro0|my_inverter:\inverter_chain:2:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:3:ro0|my_inverter:\inverter_chain:3:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:3:ro0|my_inverter:\inverter_chain:4:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:3:ro0|my_inverter:\inverter_chain:5:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:3:ro0|my_inverter:\inverter_chain:6:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:3:ro0|my_inverter:\inverter_chain:7:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:3:ro0|my_inverter:\inverter_chain:8:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:3:ro0|my_inverter:\inverter_chain:9:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:3:ro0|my_inverter:\inverter_chain:10:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|counter:\ro_chain:3:count0
+count_reset => store[0].ACLR
+count_reset => store[1].ACLR
+count_reset => store[2].ACLR
+count_reset => store[3].ACLR
+count_reset => store[4].ACLR
+count_reset => store[5].ACLR
+count_reset => store[6].ACLR
+count_reset => store[7].ACLR
+count_reset => store[8].ACLR
+count_reset => store[9].ACLR
+count_reset => store[10].ACLR
+count_reset => store[11].ACLR
+count_reset => store[12].ACLR
+count_reset => store[13].ACLR
+count_reset => store[14].ACLR
+count_reset => store[15].ACLR
+count_reset => store[16].ACLR
+count_reset => store[17].ACLR
+count_reset => store[18].ACLR
+count_reset => store[19].ACLR
+count_reset => store[20].ACLR
+count_reset => store[21].ACLR
+count_reset => store[22].ACLR
+count_reset => store[23].ACLR
+count_reset => store[24].ACLR
+count_reset => store[25].ACLR
+count_reset => store[26].ACLR
+count_reset => store[27].ACLR
+count_reset => store[28].ACLR
+count_reset => store[29].ACLR
+count_reset => store[30].ACLR
+count_enable => store[0].ENA
+count_enable => store[1].ENA
+count_enable => store[2].ENA
+count_enable => store[3].ENA
+count_enable => store[4].ENA
+count_enable => store[5].ENA
+count_enable => store[6].ENA
+count_enable => store[7].ENA
+count_enable => store[8].ENA
+count_enable => store[9].ENA
+count_enable => store[10].ENA
+count_enable => store[11].ENA
+count_enable => store[12].ENA
+count_enable => store[13].ENA
+count_enable => store[14].ENA
+count_enable => store[15].ENA
+count_enable => store[16].ENA
+count_enable => store[17].ENA
+count_enable => store[18].ENA
+count_enable => store[19].ENA
+count_enable => store[20].ENA
+count_enable => store[21].ENA
+count_enable => store[22].ENA
+count_enable => store[23].ENA
+count_enable => store[24].ENA
+count_enable => store[25].ENA
+count_enable => store[26].ENA
+count_enable => store[27].ENA
+count_enable => store[28].ENA
+count_enable => store[29].ENA
+count_enable => store[30].ENA
+count_input => store[0].CLK
+count_input => store[1].CLK
+count_input => store[2].CLK
+count_input => store[3].CLK
+count_input => store[4].CLK
+count_input => store[5].CLK
+count_input => store[6].CLK
+count_input => store[7].CLK
+count_input => store[8].CLK
+count_input => store[9].CLK
+count_input => store[10].CLK
+count_input => store[11].CLK
+count_input => store[12].CLK
+count_input => store[13].CLK
+count_input => store[14].CLK
+count_input => store[15].CLK
+count_input => store[16].CLK
+count_input => store[17].CLK
+count_input => store[18].CLK
+count_input => store[19].CLK
+count_input => store[20].CLK
+count_input => store[21].CLK
+count_input => store[22].CLK
+count_input => store[23].CLK
+count_input => store[24].CLK
+count_input => store[25].CLK
+count_input => store[26].CLK
+count_input => store[27].CLK
+count_input => store[28].CLK
+count_input => store[29].CLK
+count_input => store[30].CLK
+count_output[0] <= store[0].DB_MAX_OUTPUT_PORT_TYPE
+count_output[1] <= store[1].DB_MAX_OUTPUT_PORT_TYPE
+count_output[2] <= store[2].DB_MAX_OUTPUT_PORT_TYPE
+count_output[3] <= store[3].DB_MAX_OUTPUT_PORT_TYPE
+count_output[4] <= store[4].DB_MAX_OUTPUT_PORT_TYPE
+count_output[5] <= store[5].DB_MAX_OUTPUT_PORT_TYPE
+count_output[6] <= store[6].DB_MAX_OUTPUT_PORT_TYPE
+count_output[7] <= store[7].DB_MAX_OUTPUT_PORT_TYPE
+count_output[8] <= store[8].DB_MAX_OUTPUT_PORT_TYPE
+count_output[9] <= store[9].DB_MAX_OUTPUT_PORT_TYPE
+count_output[10] <= store[10].DB_MAX_OUTPUT_PORT_TYPE
+count_output[11] <= store[11].DB_MAX_OUTPUT_PORT_TYPE
+count_output[12] <= store[12].DB_MAX_OUTPUT_PORT_TYPE
+count_output[13] <= store[13].DB_MAX_OUTPUT_PORT_TYPE
+count_output[14] <= store[14].DB_MAX_OUTPUT_PORT_TYPE
+count_output[15] <= store[15].DB_MAX_OUTPUT_PORT_TYPE
+count_output[16] <= store[16].DB_MAX_OUTPUT_PORT_TYPE
+count_output[17] <= store[17].DB_MAX_OUTPUT_PORT_TYPE
+count_output[18] <= store[18].DB_MAX_OUTPUT_PORT_TYPE
+count_output[19] <= store[19].DB_MAX_OUTPUT_PORT_TYPE
+count_output[20] <= store[20].DB_MAX_OUTPUT_PORT_TYPE
+count_output[21] <= store[21].DB_MAX_OUTPUT_PORT_TYPE
+count_output[22] <= store[22].DB_MAX_OUTPUT_PORT_TYPE
+count_output[23] <= store[23].DB_MAX_OUTPUT_PORT_TYPE
+count_output[24] <= store[24].DB_MAX_OUTPUT_PORT_TYPE
+count_output[25] <= store[25].DB_MAX_OUTPUT_PORT_TYPE
+count_output[26] <= store[26].DB_MAX_OUTPUT_PORT_TYPE
+count_output[27] <= store[27].DB_MAX_OUTPUT_PORT_TYPE
+count_output[28] <= store[28].DB_MAX_OUTPUT_PORT_TYPE
+count_output[29] <= store[29].DB_MAX_OUTPUT_PORT_TYPE
+count_output[30] <= store[30].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:4:ro0
+ro_enable => my_nand2:nand_stage.a
+ro_out <= my_inverter:inverter_chain:10:u0.output
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:4:ro0|my_nand2:nand_stage
+a => nand_gate.IN0
+b => nand_gate.IN1
+output <= nand_gate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:4:ro0|my_inverter:\inverter_chain:0:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:4:ro0|my_inverter:\inverter_chain:1:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:4:ro0|my_inverter:\inverter_chain:2:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:4:ro0|my_inverter:\inverter_chain:3:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:4:ro0|my_inverter:\inverter_chain:4:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:4:ro0|my_inverter:\inverter_chain:5:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:4:ro0|my_inverter:\inverter_chain:6:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:4:ro0|my_inverter:\inverter_chain:7:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:4:ro0|my_inverter:\inverter_chain:8:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:4:ro0|my_inverter:\inverter_chain:9:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:4:ro0|my_inverter:\inverter_chain:10:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|counter:\ro_chain:4:count0
+count_reset => store[0].ACLR
+count_reset => store[1].ACLR
+count_reset => store[2].ACLR
+count_reset => store[3].ACLR
+count_reset => store[4].ACLR
+count_reset => store[5].ACLR
+count_reset => store[6].ACLR
+count_reset => store[7].ACLR
+count_reset => store[8].ACLR
+count_reset => store[9].ACLR
+count_reset => store[10].ACLR
+count_reset => store[11].ACLR
+count_reset => store[12].ACLR
+count_reset => store[13].ACLR
+count_reset => store[14].ACLR
+count_reset => store[15].ACLR
+count_reset => store[16].ACLR
+count_reset => store[17].ACLR
+count_reset => store[18].ACLR
+count_reset => store[19].ACLR
+count_reset => store[20].ACLR
+count_reset => store[21].ACLR
+count_reset => store[22].ACLR
+count_reset => store[23].ACLR
+count_reset => store[24].ACLR
+count_reset => store[25].ACLR
+count_reset => store[26].ACLR
+count_reset => store[27].ACLR
+count_reset => store[28].ACLR
+count_reset => store[29].ACLR
+count_reset => store[30].ACLR
+count_enable => store[0].ENA
+count_enable => store[1].ENA
+count_enable => store[2].ENA
+count_enable => store[3].ENA
+count_enable => store[4].ENA
+count_enable => store[5].ENA
+count_enable => store[6].ENA
+count_enable => store[7].ENA
+count_enable => store[8].ENA
+count_enable => store[9].ENA
+count_enable => store[10].ENA
+count_enable => store[11].ENA
+count_enable => store[12].ENA
+count_enable => store[13].ENA
+count_enable => store[14].ENA
+count_enable => store[15].ENA
+count_enable => store[16].ENA
+count_enable => store[17].ENA
+count_enable => store[18].ENA
+count_enable => store[19].ENA
+count_enable => store[20].ENA
+count_enable => store[21].ENA
+count_enable => store[22].ENA
+count_enable => store[23].ENA
+count_enable => store[24].ENA
+count_enable => store[25].ENA
+count_enable => store[26].ENA
+count_enable => store[27].ENA
+count_enable => store[28].ENA
+count_enable => store[29].ENA
+count_enable => store[30].ENA
+count_input => store[0].CLK
+count_input => store[1].CLK
+count_input => store[2].CLK
+count_input => store[3].CLK
+count_input => store[4].CLK
+count_input => store[5].CLK
+count_input => store[6].CLK
+count_input => store[7].CLK
+count_input => store[8].CLK
+count_input => store[9].CLK
+count_input => store[10].CLK
+count_input => store[11].CLK
+count_input => store[12].CLK
+count_input => store[13].CLK
+count_input => store[14].CLK
+count_input => store[15].CLK
+count_input => store[16].CLK
+count_input => store[17].CLK
+count_input => store[18].CLK
+count_input => store[19].CLK
+count_input => store[20].CLK
+count_input => store[21].CLK
+count_input => store[22].CLK
+count_input => store[23].CLK
+count_input => store[24].CLK
+count_input => store[25].CLK
+count_input => store[26].CLK
+count_input => store[27].CLK
+count_input => store[28].CLK
+count_input => store[29].CLK
+count_input => store[30].CLK
+count_output[0] <= store[0].DB_MAX_OUTPUT_PORT_TYPE
+count_output[1] <= store[1].DB_MAX_OUTPUT_PORT_TYPE
+count_output[2] <= store[2].DB_MAX_OUTPUT_PORT_TYPE
+count_output[3] <= store[3].DB_MAX_OUTPUT_PORT_TYPE
+count_output[4] <= store[4].DB_MAX_OUTPUT_PORT_TYPE
+count_output[5] <= store[5].DB_MAX_OUTPUT_PORT_TYPE
+count_output[6] <= store[6].DB_MAX_OUTPUT_PORT_TYPE
+count_output[7] <= store[7].DB_MAX_OUTPUT_PORT_TYPE
+count_output[8] <= store[8].DB_MAX_OUTPUT_PORT_TYPE
+count_output[9] <= store[9].DB_MAX_OUTPUT_PORT_TYPE
+count_output[10] <= store[10].DB_MAX_OUTPUT_PORT_TYPE
+count_output[11] <= store[11].DB_MAX_OUTPUT_PORT_TYPE
+count_output[12] <= store[12].DB_MAX_OUTPUT_PORT_TYPE
+count_output[13] <= store[13].DB_MAX_OUTPUT_PORT_TYPE
+count_output[14] <= store[14].DB_MAX_OUTPUT_PORT_TYPE
+count_output[15] <= store[15].DB_MAX_OUTPUT_PORT_TYPE
+count_output[16] <= store[16].DB_MAX_OUTPUT_PORT_TYPE
+count_output[17] <= store[17].DB_MAX_OUTPUT_PORT_TYPE
+count_output[18] <= store[18].DB_MAX_OUTPUT_PORT_TYPE
+count_output[19] <= store[19].DB_MAX_OUTPUT_PORT_TYPE
+count_output[20] <= store[20].DB_MAX_OUTPUT_PORT_TYPE
+count_output[21] <= store[21].DB_MAX_OUTPUT_PORT_TYPE
+count_output[22] <= store[22].DB_MAX_OUTPUT_PORT_TYPE
+count_output[23] <= store[23].DB_MAX_OUTPUT_PORT_TYPE
+count_output[24] <= store[24].DB_MAX_OUTPUT_PORT_TYPE
+count_output[25] <= store[25].DB_MAX_OUTPUT_PORT_TYPE
+count_output[26] <= store[26].DB_MAX_OUTPUT_PORT_TYPE
+count_output[27] <= store[27].DB_MAX_OUTPUT_PORT_TYPE
+count_output[28] <= store[28].DB_MAX_OUTPUT_PORT_TYPE
+count_output[29] <= store[29].DB_MAX_OUTPUT_PORT_TYPE
+count_output[30] <= store[30].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:5:ro0
+ro_enable => my_nand2:nand_stage.a
+ro_out <= my_inverter:inverter_chain:10:u0.output
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:5:ro0|my_nand2:nand_stage
+a => nand_gate.IN0
+b => nand_gate.IN1
+output <= nand_gate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:5:ro0|my_inverter:\inverter_chain:0:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:5:ro0|my_inverter:\inverter_chain:1:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:5:ro0|my_inverter:\inverter_chain:2:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:5:ro0|my_inverter:\inverter_chain:3:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:5:ro0|my_inverter:\inverter_chain:4:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:5:ro0|my_inverter:\inverter_chain:5:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:5:ro0|my_inverter:\inverter_chain:6:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:5:ro0|my_inverter:\inverter_chain:7:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:5:ro0|my_inverter:\inverter_chain:8:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:5:ro0|my_inverter:\inverter_chain:9:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:5:ro0|my_inverter:\inverter_chain:10:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|counter:\ro_chain:5:count0
+count_reset => store[0].ACLR
+count_reset => store[1].ACLR
+count_reset => store[2].ACLR
+count_reset => store[3].ACLR
+count_reset => store[4].ACLR
+count_reset => store[5].ACLR
+count_reset => store[6].ACLR
+count_reset => store[7].ACLR
+count_reset => store[8].ACLR
+count_reset => store[9].ACLR
+count_reset => store[10].ACLR
+count_reset => store[11].ACLR
+count_reset => store[12].ACLR
+count_reset => store[13].ACLR
+count_reset => store[14].ACLR
+count_reset => store[15].ACLR
+count_reset => store[16].ACLR
+count_reset => store[17].ACLR
+count_reset => store[18].ACLR
+count_reset => store[19].ACLR
+count_reset => store[20].ACLR
+count_reset => store[21].ACLR
+count_reset => store[22].ACLR
+count_reset => store[23].ACLR
+count_reset => store[24].ACLR
+count_reset => store[25].ACLR
+count_reset => store[26].ACLR
+count_reset => store[27].ACLR
+count_reset => store[28].ACLR
+count_reset => store[29].ACLR
+count_reset => store[30].ACLR
+count_enable => store[0].ENA
+count_enable => store[1].ENA
+count_enable => store[2].ENA
+count_enable => store[3].ENA
+count_enable => store[4].ENA
+count_enable => store[5].ENA
+count_enable => store[6].ENA
+count_enable => store[7].ENA
+count_enable => store[8].ENA
+count_enable => store[9].ENA
+count_enable => store[10].ENA
+count_enable => store[11].ENA
+count_enable => store[12].ENA
+count_enable => store[13].ENA
+count_enable => store[14].ENA
+count_enable => store[15].ENA
+count_enable => store[16].ENA
+count_enable => store[17].ENA
+count_enable => store[18].ENA
+count_enable => store[19].ENA
+count_enable => store[20].ENA
+count_enable => store[21].ENA
+count_enable => store[22].ENA
+count_enable => store[23].ENA
+count_enable => store[24].ENA
+count_enable => store[25].ENA
+count_enable => store[26].ENA
+count_enable => store[27].ENA
+count_enable => store[28].ENA
+count_enable => store[29].ENA
+count_enable => store[30].ENA
+count_input => store[0].CLK
+count_input => store[1].CLK
+count_input => store[2].CLK
+count_input => store[3].CLK
+count_input => store[4].CLK
+count_input => store[5].CLK
+count_input => store[6].CLK
+count_input => store[7].CLK
+count_input => store[8].CLK
+count_input => store[9].CLK
+count_input => store[10].CLK
+count_input => store[11].CLK
+count_input => store[12].CLK
+count_input => store[13].CLK
+count_input => store[14].CLK
+count_input => store[15].CLK
+count_input => store[16].CLK
+count_input => store[17].CLK
+count_input => store[18].CLK
+count_input => store[19].CLK
+count_input => store[20].CLK
+count_input => store[21].CLK
+count_input => store[22].CLK
+count_input => store[23].CLK
+count_input => store[24].CLK
+count_input => store[25].CLK
+count_input => store[26].CLK
+count_input => store[27].CLK
+count_input => store[28].CLK
+count_input => store[29].CLK
+count_input => store[30].CLK
+count_output[0] <= store[0].DB_MAX_OUTPUT_PORT_TYPE
+count_output[1] <= store[1].DB_MAX_OUTPUT_PORT_TYPE
+count_output[2] <= store[2].DB_MAX_OUTPUT_PORT_TYPE
+count_output[3] <= store[3].DB_MAX_OUTPUT_PORT_TYPE
+count_output[4] <= store[4].DB_MAX_OUTPUT_PORT_TYPE
+count_output[5] <= store[5].DB_MAX_OUTPUT_PORT_TYPE
+count_output[6] <= store[6].DB_MAX_OUTPUT_PORT_TYPE
+count_output[7] <= store[7].DB_MAX_OUTPUT_PORT_TYPE
+count_output[8] <= store[8].DB_MAX_OUTPUT_PORT_TYPE
+count_output[9] <= store[9].DB_MAX_OUTPUT_PORT_TYPE
+count_output[10] <= store[10].DB_MAX_OUTPUT_PORT_TYPE
+count_output[11] <= store[11].DB_MAX_OUTPUT_PORT_TYPE
+count_output[12] <= store[12].DB_MAX_OUTPUT_PORT_TYPE
+count_output[13] <= store[13].DB_MAX_OUTPUT_PORT_TYPE
+count_output[14] <= store[14].DB_MAX_OUTPUT_PORT_TYPE
+count_output[15] <= store[15].DB_MAX_OUTPUT_PORT_TYPE
+count_output[16] <= store[16].DB_MAX_OUTPUT_PORT_TYPE
+count_output[17] <= store[17].DB_MAX_OUTPUT_PORT_TYPE
+count_output[18] <= store[18].DB_MAX_OUTPUT_PORT_TYPE
+count_output[19] <= store[19].DB_MAX_OUTPUT_PORT_TYPE
+count_output[20] <= store[20].DB_MAX_OUTPUT_PORT_TYPE
+count_output[21] <= store[21].DB_MAX_OUTPUT_PORT_TYPE
+count_output[22] <= store[22].DB_MAX_OUTPUT_PORT_TYPE
+count_output[23] <= store[23].DB_MAX_OUTPUT_PORT_TYPE
+count_output[24] <= store[24].DB_MAX_OUTPUT_PORT_TYPE
+count_output[25] <= store[25].DB_MAX_OUTPUT_PORT_TYPE
+count_output[26] <= store[26].DB_MAX_OUTPUT_PORT_TYPE
+count_output[27] <= store[27].DB_MAX_OUTPUT_PORT_TYPE
+count_output[28] <= store[28].DB_MAX_OUTPUT_PORT_TYPE
+count_output[29] <= store[29].DB_MAX_OUTPUT_PORT_TYPE
+count_output[30] <= store[30].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:6:ro0
+ro_enable => my_nand2:nand_stage.a
+ro_out <= my_inverter:inverter_chain:10:u0.output
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:6:ro0|my_nand2:nand_stage
+a => nand_gate.IN0
+b => nand_gate.IN1
+output <= nand_gate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:6:ro0|my_inverter:\inverter_chain:0:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:6:ro0|my_inverter:\inverter_chain:1:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:6:ro0|my_inverter:\inverter_chain:2:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:6:ro0|my_inverter:\inverter_chain:3:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:6:ro0|my_inverter:\inverter_chain:4:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:6:ro0|my_inverter:\inverter_chain:5:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:6:ro0|my_inverter:\inverter_chain:6:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:6:ro0|my_inverter:\inverter_chain:7:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:6:ro0|my_inverter:\inverter_chain:8:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:6:ro0|my_inverter:\inverter_chain:9:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:6:ro0|my_inverter:\inverter_chain:10:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|counter:\ro_chain:6:count0
+count_reset => store[0].ACLR
+count_reset => store[1].ACLR
+count_reset => store[2].ACLR
+count_reset => store[3].ACLR
+count_reset => store[4].ACLR
+count_reset => store[5].ACLR
+count_reset => store[6].ACLR
+count_reset => store[7].ACLR
+count_reset => store[8].ACLR
+count_reset => store[9].ACLR
+count_reset => store[10].ACLR
+count_reset => store[11].ACLR
+count_reset => store[12].ACLR
+count_reset => store[13].ACLR
+count_reset => store[14].ACLR
+count_reset => store[15].ACLR
+count_reset => store[16].ACLR
+count_reset => store[17].ACLR
+count_reset => store[18].ACLR
+count_reset => store[19].ACLR
+count_reset => store[20].ACLR
+count_reset => store[21].ACLR
+count_reset => store[22].ACLR
+count_reset => store[23].ACLR
+count_reset => store[24].ACLR
+count_reset => store[25].ACLR
+count_reset => store[26].ACLR
+count_reset => store[27].ACLR
+count_reset => store[28].ACLR
+count_reset => store[29].ACLR
+count_reset => store[30].ACLR
+count_enable => store[0].ENA
+count_enable => store[1].ENA
+count_enable => store[2].ENA
+count_enable => store[3].ENA
+count_enable => store[4].ENA
+count_enable => store[5].ENA
+count_enable => store[6].ENA
+count_enable => store[7].ENA
+count_enable => store[8].ENA
+count_enable => store[9].ENA
+count_enable => store[10].ENA
+count_enable => store[11].ENA
+count_enable => store[12].ENA
+count_enable => store[13].ENA
+count_enable => store[14].ENA
+count_enable => store[15].ENA
+count_enable => store[16].ENA
+count_enable => store[17].ENA
+count_enable => store[18].ENA
+count_enable => store[19].ENA
+count_enable => store[20].ENA
+count_enable => store[21].ENA
+count_enable => store[22].ENA
+count_enable => store[23].ENA
+count_enable => store[24].ENA
+count_enable => store[25].ENA
+count_enable => store[26].ENA
+count_enable => store[27].ENA
+count_enable => store[28].ENA
+count_enable => store[29].ENA
+count_enable => store[30].ENA
+count_input => store[0].CLK
+count_input => store[1].CLK
+count_input => store[2].CLK
+count_input => store[3].CLK
+count_input => store[4].CLK
+count_input => store[5].CLK
+count_input => store[6].CLK
+count_input => store[7].CLK
+count_input => store[8].CLK
+count_input => store[9].CLK
+count_input => store[10].CLK
+count_input => store[11].CLK
+count_input => store[12].CLK
+count_input => store[13].CLK
+count_input => store[14].CLK
+count_input => store[15].CLK
+count_input => store[16].CLK
+count_input => store[17].CLK
+count_input => store[18].CLK
+count_input => store[19].CLK
+count_input => store[20].CLK
+count_input => store[21].CLK
+count_input => store[22].CLK
+count_input => store[23].CLK
+count_input => store[24].CLK
+count_input => store[25].CLK
+count_input => store[26].CLK
+count_input => store[27].CLK
+count_input => store[28].CLK
+count_input => store[29].CLK
+count_input => store[30].CLK
+count_output[0] <= store[0].DB_MAX_OUTPUT_PORT_TYPE
+count_output[1] <= store[1].DB_MAX_OUTPUT_PORT_TYPE
+count_output[2] <= store[2].DB_MAX_OUTPUT_PORT_TYPE
+count_output[3] <= store[3].DB_MAX_OUTPUT_PORT_TYPE
+count_output[4] <= store[4].DB_MAX_OUTPUT_PORT_TYPE
+count_output[5] <= store[5].DB_MAX_OUTPUT_PORT_TYPE
+count_output[6] <= store[6].DB_MAX_OUTPUT_PORT_TYPE
+count_output[7] <= store[7].DB_MAX_OUTPUT_PORT_TYPE
+count_output[8] <= store[8].DB_MAX_OUTPUT_PORT_TYPE
+count_output[9] <= store[9].DB_MAX_OUTPUT_PORT_TYPE
+count_output[10] <= store[10].DB_MAX_OUTPUT_PORT_TYPE
+count_output[11] <= store[11].DB_MAX_OUTPUT_PORT_TYPE
+count_output[12] <= store[12].DB_MAX_OUTPUT_PORT_TYPE
+count_output[13] <= store[13].DB_MAX_OUTPUT_PORT_TYPE
+count_output[14] <= store[14].DB_MAX_OUTPUT_PORT_TYPE
+count_output[15] <= store[15].DB_MAX_OUTPUT_PORT_TYPE
+count_output[16] <= store[16].DB_MAX_OUTPUT_PORT_TYPE
+count_output[17] <= store[17].DB_MAX_OUTPUT_PORT_TYPE
+count_output[18] <= store[18].DB_MAX_OUTPUT_PORT_TYPE
+count_output[19] <= store[19].DB_MAX_OUTPUT_PORT_TYPE
+count_output[20] <= store[20].DB_MAX_OUTPUT_PORT_TYPE
+count_output[21] <= store[21].DB_MAX_OUTPUT_PORT_TYPE
+count_output[22] <= store[22].DB_MAX_OUTPUT_PORT_TYPE
+count_output[23] <= store[23].DB_MAX_OUTPUT_PORT_TYPE
+count_output[24] <= store[24].DB_MAX_OUTPUT_PORT_TYPE
+count_output[25] <= store[25].DB_MAX_OUTPUT_PORT_TYPE
+count_output[26] <= store[26].DB_MAX_OUTPUT_PORT_TYPE
+count_output[27] <= store[27].DB_MAX_OUTPUT_PORT_TYPE
+count_output[28] <= store[28].DB_MAX_OUTPUT_PORT_TYPE
+count_output[29] <= store[29].DB_MAX_OUTPUT_PORT_TYPE
+count_output[30] <= store[30].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:7:ro0
+ro_enable => my_nand2:nand_stage.a
+ro_out <= my_inverter:inverter_chain:10:u0.output
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:7:ro0|my_nand2:nand_stage
+a => nand_gate.IN0
+b => nand_gate.IN1
+output <= nand_gate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:7:ro0|my_inverter:\inverter_chain:0:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:7:ro0|my_inverter:\inverter_chain:1:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:7:ro0|my_inverter:\inverter_chain:2:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:7:ro0|my_inverter:\inverter_chain:3:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:7:ro0|my_inverter:\inverter_chain:4:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:7:ro0|my_inverter:\inverter_chain:5:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:7:ro0|my_inverter:\inverter_chain:6:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:7:ro0|my_inverter:\inverter_chain:7:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:7:ro0|my_inverter:\inverter_chain:8:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:7:ro0|my_inverter:\inverter_chain:9:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:7:ro0|my_inverter:\inverter_chain:10:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|counter:\ro_chain:7:count0
+count_reset => store[0].ACLR
+count_reset => store[1].ACLR
+count_reset => store[2].ACLR
+count_reset => store[3].ACLR
+count_reset => store[4].ACLR
+count_reset => store[5].ACLR
+count_reset => store[6].ACLR
+count_reset => store[7].ACLR
+count_reset => store[8].ACLR
+count_reset => store[9].ACLR
+count_reset => store[10].ACLR
+count_reset => store[11].ACLR
+count_reset => store[12].ACLR
+count_reset => store[13].ACLR
+count_reset => store[14].ACLR
+count_reset => store[15].ACLR
+count_reset => store[16].ACLR
+count_reset => store[17].ACLR
+count_reset => store[18].ACLR
+count_reset => store[19].ACLR
+count_reset => store[20].ACLR
+count_reset => store[21].ACLR
+count_reset => store[22].ACLR
+count_reset => store[23].ACLR
+count_reset => store[24].ACLR
+count_reset => store[25].ACLR
+count_reset => store[26].ACLR
+count_reset => store[27].ACLR
+count_reset => store[28].ACLR
+count_reset => store[29].ACLR
+count_reset => store[30].ACLR
+count_enable => store[0].ENA
+count_enable => store[1].ENA
+count_enable => store[2].ENA
+count_enable => store[3].ENA
+count_enable => store[4].ENA
+count_enable => store[5].ENA
+count_enable => store[6].ENA
+count_enable => store[7].ENA
+count_enable => store[8].ENA
+count_enable => store[9].ENA
+count_enable => store[10].ENA
+count_enable => store[11].ENA
+count_enable => store[12].ENA
+count_enable => store[13].ENA
+count_enable => store[14].ENA
+count_enable => store[15].ENA
+count_enable => store[16].ENA
+count_enable => store[17].ENA
+count_enable => store[18].ENA
+count_enable => store[19].ENA
+count_enable => store[20].ENA
+count_enable => store[21].ENA
+count_enable => store[22].ENA
+count_enable => store[23].ENA
+count_enable => store[24].ENA
+count_enable => store[25].ENA
+count_enable => store[26].ENA
+count_enable => store[27].ENA
+count_enable => store[28].ENA
+count_enable => store[29].ENA
+count_enable => store[30].ENA
+count_input => store[0].CLK
+count_input => store[1].CLK
+count_input => store[2].CLK
+count_input => store[3].CLK
+count_input => store[4].CLK
+count_input => store[5].CLK
+count_input => store[6].CLK
+count_input => store[7].CLK
+count_input => store[8].CLK
+count_input => store[9].CLK
+count_input => store[10].CLK
+count_input => store[11].CLK
+count_input => store[12].CLK
+count_input => store[13].CLK
+count_input => store[14].CLK
+count_input => store[15].CLK
+count_input => store[16].CLK
+count_input => store[17].CLK
+count_input => store[18].CLK
+count_input => store[19].CLK
+count_input => store[20].CLK
+count_input => store[21].CLK
+count_input => store[22].CLK
+count_input => store[23].CLK
+count_input => store[24].CLK
+count_input => store[25].CLK
+count_input => store[26].CLK
+count_input => store[27].CLK
+count_input => store[28].CLK
+count_input => store[29].CLK
+count_input => store[30].CLK
+count_output[0] <= store[0].DB_MAX_OUTPUT_PORT_TYPE
+count_output[1] <= store[1].DB_MAX_OUTPUT_PORT_TYPE
+count_output[2] <= store[2].DB_MAX_OUTPUT_PORT_TYPE
+count_output[3] <= store[3].DB_MAX_OUTPUT_PORT_TYPE
+count_output[4] <= store[4].DB_MAX_OUTPUT_PORT_TYPE
+count_output[5] <= store[5].DB_MAX_OUTPUT_PORT_TYPE
+count_output[6] <= store[6].DB_MAX_OUTPUT_PORT_TYPE
+count_output[7] <= store[7].DB_MAX_OUTPUT_PORT_TYPE
+count_output[8] <= store[8].DB_MAX_OUTPUT_PORT_TYPE
+count_output[9] <= store[9].DB_MAX_OUTPUT_PORT_TYPE
+count_output[10] <= store[10].DB_MAX_OUTPUT_PORT_TYPE
+count_output[11] <= store[11].DB_MAX_OUTPUT_PORT_TYPE
+count_output[12] <= store[12].DB_MAX_OUTPUT_PORT_TYPE
+count_output[13] <= store[13].DB_MAX_OUTPUT_PORT_TYPE
+count_output[14] <= store[14].DB_MAX_OUTPUT_PORT_TYPE
+count_output[15] <= store[15].DB_MAX_OUTPUT_PORT_TYPE
+count_output[16] <= store[16].DB_MAX_OUTPUT_PORT_TYPE
+count_output[17] <= store[17].DB_MAX_OUTPUT_PORT_TYPE
+count_output[18] <= store[18].DB_MAX_OUTPUT_PORT_TYPE
+count_output[19] <= store[19].DB_MAX_OUTPUT_PORT_TYPE
+count_output[20] <= store[20].DB_MAX_OUTPUT_PORT_TYPE
+count_output[21] <= store[21].DB_MAX_OUTPUT_PORT_TYPE
+count_output[22] <= store[22].DB_MAX_OUTPUT_PORT_TYPE
+count_output[23] <= store[23].DB_MAX_OUTPUT_PORT_TYPE
+count_output[24] <= store[24].DB_MAX_OUTPUT_PORT_TYPE
+count_output[25] <= store[25].DB_MAX_OUTPUT_PORT_TYPE
+count_output[26] <= store[26].DB_MAX_OUTPUT_PORT_TYPE
+count_output[27] <= store[27].DB_MAX_OUTPUT_PORT_TYPE
+count_output[28] <= store[28].DB_MAX_OUTPUT_PORT_TYPE
+count_output[29] <= store[29].DB_MAX_OUTPUT_PORT_TYPE
+count_output[30] <= store[30].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:8:ro0
+ro_enable => my_nand2:nand_stage.a
+ro_out <= my_inverter:inverter_chain:10:u0.output
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:8:ro0|my_nand2:nand_stage
+a => nand_gate.IN0
+b => nand_gate.IN1
+output <= nand_gate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:8:ro0|my_inverter:\inverter_chain:0:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:8:ro0|my_inverter:\inverter_chain:1:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:8:ro0|my_inverter:\inverter_chain:2:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:8:ro0|my_inverter:\inverter_chain:3:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:8:ro0|my_inverter:\inverter_chain:4:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:8:ro0|my_inverter:\inverter_chain:5:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:8:ro0|my_inverter:\inverter_chain:6:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:8:ro0|my_inverter:\inverter_chain:7:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:8:ro0|my_inverter:\inverter_chain:8:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:8:ro0|my_inverter:\inverter_chain:9:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:8:ro0|my_inverter:\inverter_chain:10:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|counter:\ro_chain:8:count0
+count_reset => store[0].ACLR
+count_reset => store[1].ACLR
+count_reset => store[2].ACLR
+count_reset => store[3].ACLR
+count_reset => store[4].ACLR
+count_reset => store[5].ACLR
+count_reset => store[6].ACLR
+count_reset => store[7].ACLR
+count_reset => store[8].ACLR
+count_reset => store[9].ACLR
+count_reset => store[10].ACLR
+count_reset => store[11].ACLR
+count_reset => store[12].ACLR
+count_reset => store[13].ACLR
+count_reset => store[14].ACLR
+count_reset => store[15].ACLR
+count_reset => store[16].ACLR
+count_reset => store[17].ACLR
+count_reset => store[18].ACLR
+count_reset => store[19].ACLR
+count_reset => store[20].ACLR
+count_reset => store[21].ACLR
+count_reset => store[22].ACLR
+count_reset => store[23].ACLR
+count_reset => store[24].ACLR
+count_reset => store[25].ACLR
+count_reset => store[26].ACLR
+count_reset => store[27].ACLR
+count_reset => store[28].ACLR
+count_reset => store[29].ACLR
+count_reset => store[30].ACLR
+count_enable => store[0].ENA
+count_enable => store[1].ENA
+count_enable => store[2].ENA
+count_enable => store[3].ENA
+count_enable => store[4].ENA
+count_enable => store[5].ENA
+count_enable => store[6].ENA
+count_enable => store[7].ENA
+count_enable => store[8].ENA
+count_enable => store[9].ENA
+count_enable => store[10].ENA
+count_enable => store[11].ENA
+count_enable => store[12].ENA
+count_enable => store[13].ENA
+count_enable => store[14].ENA
+count_enable => store[15].ENA
+count_enable => store[16].ENA
+count_enable => store[17].ENA
+count_enable => store[18].ENA
+count_enable => store[19].ENA
+count_enable => store[20].ENA
+count_enable => store[21].ENA
+count_enable => store[22].ENA
+count_enable => store[23].ENA
+count_enable => store[24].ENA
+count_enable => store[25].ENA
+count_enable => store[26].ENA
+count_enable => store[27].ENA
+count_enable => store[28].ENA
+count_enable => store[29].ENA
+count_enable => store[30].ENA
+count_input => store[0].CLK
+count_input => store[1].CLK
+count_input => store[2].CLK
+count_input => store[3].CLK
+count_input => store[4].CLK
+count_input => store[5].CLK
+count_input => store[6].CLK
+count_input => store[7].CLK
+count_input => store[8].CLK
+count_input => store[9].CLK
+count_input => store[10].CLK
+count_input => store[11].CLK
+count_input => store[12].CLK
+count_input => store[13].CLK
+count_input => store[14].CLK
+count_input => store[15].CLK
+count_input => store[16].CLK
+count_input => store[17].CLK
+count_input => store[18].CLK
+count_input => store[19].CLK
+count_input => store[20].CLK
+count_input => store[21].CLK
+count_input => store[22].CLK
+count_input => store[23].CLK
+count_input => store[24].CLK
+count_input => store[25].CLK
+count_input => store[26].CLK
+count_input => store[27].CLK
+count_input => store[28].CLK
+count_input => store[29].CLK
+count_input => store[30].CLK
+count_output[0] <= store[0].DB_MAX_OUTPUT_PORT_TYPE
+count_output[1] <= store[1].DB_MAX_OUTPUT_PORT_TYPE
+count_output[2] <= store[2].DB_MAX_OUTPUT_PORT_TYPE
+count_output[3] <= store[3].DB_MAX_OUTPUT_PORT_TYPE
+count_output[4] <= store[4].DB_MAX_OUTPUT_PORT_TYPE
+count_output[5] <= store[5].DB_MAX_OUTPUT_PORT_TYPE
+count_output[6] <= store[6].DB_MAX_OUTPUT_PORT_TYPE
+count_output[7] <= store[7].DB_MAX_OUTPUT_PORT_TYPE
+count_output[8] <= store[8].DB_MAX_OUTPUT_PORT_TYPE
+count_output[9] <= store[9].DB_MAX_OUTPUT_PORT_TYPE
+count_output[10] <= store[10].DB_MAX_OUTPUT_PORT_TYPE
+count_output[11] <= store[11].DB_MAX_OUTPUT_PORT_TYPE
+count_output[12] <= store[12].DB_MAX_OUTPUT_PORT_TYPE
+count_output[13] <= store[13].DB_MAX_OUTPUT_PORT_TYPE
+count_output[14] <= store[14].DB_MAX_OUTPUT_PORT_TYPE
+count_output[15] <= store[15].DB_MAX_OUTPUT_PORT_TYPE
+count_output[16] <= store[16].DB_MAX_OUTPUT_PORT_TYPE
+count_output[17] <= store[17].DB_MAX_OUTPUT_PORT_TYPE
+count_output[18] <= store[18].DB_MAX_OUTPUT_PORT_TYPE
+count_output[19] <= store[19].DB_MAX_OUTPUT_PORT_TYPE
+count_output[20] <= store[20].DB_MAX_OUTPUT_PORT_TYPE
+count_output[21] <= store[21].DB_MAX_OUTPUT_PORT_TYPE
+count_output[22] <= store[22].DB_MAX_OUTPUT_PORT_TYPE
+count_output[23] <= store[23].DB_MAX_OUTPUT_PORT_TYPE
+count_output[24] <= store[24].DB_MAX_OUTPUT_PORT_TYPE
+count_output[25] <= store[25].DB_MAX_OUTPUT_PORT_TYPE
+count_output[26] <= store[26].DB_MAX_OUTPUT_PORT_TYPE
+count_output[27] <= store[27].DB_MAX_OUTPUT_PORT_TYPE
+count_output[28] <= store[28].DB_MAX_OUTPUT_PORT_TYPE
+count_output[29] <= store[29].DB_MAX_OUTPUT_PORT_TYPE
+count_output[30] <= store[30].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:9:ro0
+ro_enable => my_nand2:nand_stage.a
+ro_out <= my_inverter:inverter_chain:10:u0.output
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:9:ro0|my_nand2:nand_stage
+a => nand_gate.IN0
+b => nand_gate.IN1
+output <= nand_gate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:9:ro0|my_inverter:\inverter_chain:0:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:9:ro0|my_inverter:\inverter_chain:1:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:9:ro0|my_inverter:\inverter_chain:2:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:9:ro0|my_inverter:\inverter_chain:3:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:9:ro0|my_inverter:\inverter_chain:4:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:9:ro0|my_inverter:\inverter_chain:5:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:9:ro0|my_inverter:\inverter_chain:6:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:9:ro0|my_inverter:\inverter_chain:7:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:9:ro0|my_inverter:\inverter_chain:8:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:9:ro0|my_inverter:\inverter_chain:9:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:9:ro0|my_inverter:\inverter_chain:10:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|counter:\ro_chain:9:count0
+count_reset => store[0].ACLR
+count_reset => store[1].ACLR
+count_reset => store[2].ACLR
+count_reset => store[3].ACLR
+count_reset => store[4].ACLR
+count_reset => store[5].ACLR
+count_reset => store[6].ACLR
+count_reset => store[7].ACLR
+count_reset => store[8].ACLR
+count_reset => store[9].ACLR
+count_reset => store[10].ACLR
+count_reset => store[11].ACLR
+count_reset => store[12].ACLR
+count_reset => store[13].ACLR
+count_reset => store[14].ACLR
+count_reset => store[15].ACLR
+count_reset => store[16].ACLR
+count_reset => store[17].ACLR
+count_reset => store[18].ACLR
+count_reset => store[19].ACLR
+count_reset => store[20].ACLR
+count_reset => store[21].ACLR
+count_reset => store[22].ACLR
+count_reset => store[23].ACLR
+count_reset => store[24].ACLR
+count_reset => store[25].ACLR
+count_reset => store[26].ACLR
+count_reset => store[27].ACLR
+count_reset => store[28].ACLR
+count_reset => store[29].ACLR
+count_reset => store[30].ACLR
+count_enable => store[0].ENA
+count_enable => store[1].ENA
+count_enable => store[2].ENA
+count_enable => store[3].ENA
+count_enable => store[4].ENA
+count_enable => store[5].ENA
+count_enable => store[6].ENA
+count_enable => store[7].ENA
+count_enable => store[8].ENA
+count_enable => store[9].ENA
+count_enable => store[10].ENA
+count_enable => store[11].ENA
+count_enable => store[12].ENA
+count_enable => store[13].ENA
+count_enable => store[14].ENA
+count_enable => store[15].ENA
+count_enable => store[16].ENA
+count_enable => store[17].ENA
+count_enable => store[18].ENA
+count_enable => store[19].ENA
+count_enable => store[20].ENA
+count_enable => store[21].ENA
+count_enable => store[22].ENA
+count_enable => store[23].ENA
+count_enable => store[24].ENA
+count_enable => store[25].ENA
+count_enable => store[26].ENA
+count_enable => store[27].ENA
+count_enable => store[28].ENA
+count_enable => store[29].ENA
+count_enable => store[30].ENA
+count_input => store[0].CLK
+count_input => store[1].CLK
+count_input => store[2].CLK
+count_input => store[3].CLK
+count_input => store[4].CLK
+count_input => store[5].CLK
+count_input => store[6].CLK
+count_input => store[7].CLK
+count_input => store[8].CLK
+count_input => store[9].CLK
+count_input => store[10].CLK
+count_input => store[11].CLK
+count_input => store[12].CLK
+count_input => store[13].CLK
+count_input => store[14].CLK
+count_input => store[15].CLK
+count_input => store[16].CLK
+count_input => store[17].CLK
+count_input => store[18].CLK
+count_input => store[19].CLK
+count_input => store[20].CLK
+count_input => store[21].CLK
+count_input => store[22].CLK
+count_input => store[23].CLK
+count_input => store[24].CLK
+count_input => store[25].CLK
+count_input => store[26].CLK
+count_input => store[27].CLK
+count_input => store[28].CLK
+count_input => store[29].CLK
+count_input => store[30].CLK
+count_output[0] <= store[0].DB_MAX_OUTPUT_PORT_TYPE
+count_output[1] <= store[1].DB_MAX_OUTPUT_PORT_TYPE
+count_output[2] <= store[2].DB_MAX_OUTPUT_PORT_TYPE
+count_output[3] <= store[3].DB_MAX_OUTPUT_PORT_TYPE
+count_output[4] <= store[4].DB_MAX_OUTPUT_PORT_TYPE
+count_output[5] <= store[5].DB_MAX_OUTPUT_PORT_TYPE
+count_output[6] <= store[6].DB_MAX_OUTPUT_PORT_TYPE
+count_output[7] <= store[7].DB_MAX_OUTPUT_PORT_TYPE
+count_output[8] <= store[8].DB_MAX_OUTPUT_PORT_TYPE
+count_output[9] <= store[9].DB_MAX_OUTPUT_PORT_TYPE
+count_output[10] <= store[10].DB_MAX_OUTPUT_PORT_TYPE
+count_output[11] <= store[11].DB_MAX_OUTPUT_PORT_TYPE
+count_output[12] <= store[12].DB_MAX_OUTPUT_PORT_TYPE
+count_output[13] <= store[13].DB_MAX_OUTPUT_PORT_TYPE
+count_output[14] <= store[14].DB_MAX_OUTPUT_PORT_TYPE
+count_output[15] <= store[15].DB_MAX_OUTPUT_PORT_TYPE
+count_output[16] <= store[16].DB_MAX_OUTPUT_PORT_TYPE
+count_output[17] <= store[17].DB_MAX_OUTPUT_PORT_TYPE
+count_output[18] <= store[18].DB_MAX_OUTPUT_PORT_TYPE
+count_output[19] <= store[19].DB_MAX_OUTPUT_PORT_TYPE
+count_output[20] <= store[20].DB_MAX_OUTPUT_PORT_TYPE
+count_output[21] <= store[21].DB_MAX_OUTPUT_PORT_TYPE
+count_output[22] <= store[22].DB_MAX_OUTPUT_PORT_TYPE
+count_output[23] <= store[23].DB_MAX_OUTPUT_PORT_TYPE
+count_output[24] <= store[24].DB_MAX_OUTPUT_PORT_TYPE
+count_output[25] <= store[25].DB_MAX_OUTPUT_PORT_TYPE
+count_output[26] <= store[26].DB_MAX_OUTPUT_PORT_TYPE
+count_output[27] <= store[27].DB_MAX_OUTPUT_PORT_TYPE
+count_output[28] <= store[28].DB_MAX_OUTPUT_PORT_TYPE
+count_output[29] <= store[29].DB_MAX_OUTPUT_PORT_TYPE
+count_output[30] <= store[30].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:10:ro0
+ro_enable => my_nand2:nand_stage.a
+ro_out <= my_inverter:inverter_chain:10:u0.output
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:10:ro0|my_nand2:nand_stage
+a => nand_gate.IN0
+b => nand_gate.IN1
+output <= nand_gate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:10:ro0|my_inverter:\inverter_chain:0:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:10:ro0|my_inverter:\inverter_chain:1:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:10:ro0|my_inverter:\inverter_chain:2:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:10:ro0|my_inverter:\inverter_chain:3:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:10:ro0|my_inverter:\inverter_chain:4:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:10:ro0|my_inverter:\inverter_chain:5:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:10:ro0|my_inverter:\inverter_chain:6:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:10:ro0|my_inverter:\inverter_chain:7:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:10:ro0|my_inverter:\inverter_chain:8:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:10:ro0|my_inverter:\inverter_chain:9:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:10:ro0|my_inverter:\inverter_chain:10:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|counter:\ro_chain:10:count0
+count_reset => store[0].ACLR
+count_reset => store[1].ACLR
+count_reset => store[2].ACLR
+count_reset => store[3].ACLR
+count_reset => store[4].ACLR
+count_reset => store[5].ACLR
+count_reset => store[6].ACLR
+count_reset => store[7].ACLR
+count_reset => store[8].ACLR
+count_reset => store[9].ACLR
+count_reset => store[10].ACLR
+count_reset => store[11].ACLR
+count_reset => store[12].ACLR
+count_reset => store[13].ACLR
+count_reset => store[14].ACLR
+count_reset => store[15].ACLR
+count_reset => store[16].ACLR
+count_reset => store[17].ACLR
+count_reset => store[18].ACLR
+count_reset => store[19].ACLR
+count_reset => store[20].ACLR
+count_reset => store[21].ACLR
+count_reset => store[22].ACLR
+count_reset => store[23].ACLR
+count_reset => store[24].ACLR
+count_reset => store[25].ACLR
+count_reset => store[26].ACLR
+count_reset => store[27].ACLR
+count_reset => store[28].ACLR
+count_reset => store[29].ACLR
+count_reset => store[30].ACLR
+count_enable => store[0].ENA
+count_enable => store[1].ENA
+count_enable => store[2].ENA
+count_enable => store[3].ENA
+count_enable => store[4].ENA
+count_enable => store[5].ENA
+count_enable => store[6].ENA
+count_enable => store[7].ENA
+count_enable => store[8].ENA
+count_enable => store[9].ENA
+count_enable => store[10].ENA
+count_enable => store[11].ENA
+count_enable => store[12].ENA
+count_enable => store[13].ENA
+count_enable => store[14].ENA
+count_enable => store[15].ENA
+count_enable => store[16].ENA
+count_enable => store[17].ENA
+count_enable => store[18].ENA
+count_enable => store[19].ENA
+count_enable => store[20].ENA
+count_enable => store[21].ENA
+count_enable => store[22].ENA
+count_enable => store[23].ENA
+count_enable => store[24].ENA
+count_enable => store[25].ENA
+count_enable => store[26].ENA
+count_enable => store[27].ENA
+count_enable => store[28].ENA
+count_enable => store[29].ENA
+count_enable => store[30].ENA
+count_input => store[0].CLK
+count_input => store[1].CLK
+count_input => store[2].CLK
+count_input => store[3].CLK
+count_input => store[4].CLK
+count_input => store[5].CLK
+count_input => store[6].CLK
+count_input => store[7].CLK
+count_input => store[8].CLK
+count_input => store[9].CLK
+count_input => store[10].CLK
+count_input => store[11].CLK
+count_input => store[12].CLK
+count_input => store[13].CLK
+count_input => store[14].CLK
+count_input => store[15].CLK
+count_input => store[16].CLK
+count_input => store[17].CLK
+count_input => store[18].CLK
+count_input => store[19].CLK
+count_input => store[20].CLK
+count_input => store[21].CLK
+count_input => store[22].CLK
+count_input => store[23].CLK
+count_input => store[24].CLK
+count_input => store[25].CLK
+count_input => store[26].CLK
+count_input => store[27].CLK
+count_input => store[28].CLK
+count_input => store[29].CLK
+count_input => store[30].CLK
+count_output[0] <= store[0].DB_MAX_OUTPUT_PORT_TYPE
+count_output[1] <= store[1].DB_MAX_OUTPUT_PORT_TYPE
+count_output[2] <= store[2].DB_MAX_OUTPUT_PORT_TYPE
+count_output[3] <= store[3].DB_MAX_OUTPUT_PORT_TYPE
+count_output[4] <= store[4].DB_MAX_OUTPUT_PORT_TYPE
+count_output[5] <= store[5].DB_MAX_OUTPUT_PORT_TYPE
+count_output[6] <= store[6].DB_MAX_OUTPUT_PORT_TYPE
+count_output[7] <= store[7].DB_MAX_OUTPUT_PORT_TYPE
+count_output[8] <= store[8].DB_MAX_OUTPUT_PORT_TYPE
+count_output[9] <= store[9].DB_MAX_OUTPUT_PORT_TYPE
+count_output[10] <= store[10].DB_MAX_OUTPUT_PORT_TYPE
+count_output[11] <= store[11].DB_MAX_OUTPUT_PORT_TYPE
+count_output[12] <= store[12].DB_MAX_OUTPUT_PORT_TYPE
+count_output[13] <= store[13].DB_MAX_OUTPUT_PORT_TYPE
+count_output[14] <= store[14].DB_MAX_OUTPUT_PORT_TYPE
+count_output[15] <= store[15].DB_MAX_OUTPUT_PORT_TYPE
+count_output[16] <= store[16].DB_MAX_OUTPUT_PORT_TYPE
+count_output[17] <= store[17].DB_MAX_OUTPUT_PORT_TYPE
+count_output[18] <= store[18].DB_MAX_OUTPUT_PORT_TYPE
+count_output[19] <= store[19].DB_MAX_OUTPUT_PORT_TYPE
+count_output[20] <= store[20].DB_MAX_OUTPUT_PORT_TYPE
+count_output[21] <= store[21].DB_MAX_OUTPUT_PORT_TYPE
+count_output[22] <= store[22].DB_MAX_OUTPUT_PORT_TYPE
+count_output[23] <= store[23].DB_MAX_OUTPUT_PORT_TYPE
+count_output[24] <= store[24].DB_MAX_OUTPUT_PORT_TYPE
+count_output[25] <= store[25].DB_MAX_OUTPUT_PORT_TYPE
+count_output[26] <= store[26].DB_MAX_OUTPUT_PORT_TYPE
+count_output[27] <= store[27].DB_MAX_OUTPUT_PORT_TYPE
+count_output[28] <= store[28].DB_MAX_OUTPUT_PORT_TYPE
+count_output[29] <= store[29].DB_MAX_OUTPUT_PORT_TYPE
+count_output[30] <= store[30].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:11:ro0
+ro_enable => my_nand2:nand_stage.a
+ro_out <= my_inverter:inverter_chain:10:u0.output
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:11:ro0|my_nand2:nand_stage
+a => nand_gate.IN0
+b => nand_gate.IN1
+output <= nand_gate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:11:ro0|my_inverter:\inverter_chain:0:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:11:ro0|my_inverter:\inverter_chain:1:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:11:ro0|my_inverter:\inverter_chain:2:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:11:ro0|my_inverter:\inverter_chain:3:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:11:ro0|my_inverter:\inverter_chain:4:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:11:ro0|my_inverter:\inverter_chain:5:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:11:ro0|my_inverter:\inverter_chain:6:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:11:ro0|my_inverter:\inverter_chain:7:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:11:ro0|my_inverter:\inverter_chain:8:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:11:ro0|my_inverter:\inverter_chain:9:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:11:ro0|my_inverter:\inverter_chain:10:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|counter:\ro_chain:11:count0
+count_reset => store[0].ACLR
+count_reset => store[1].ACLR
+count_reset => store[2].ACLR
+count_reset => store[3].ACLR
+count_reset => store[4].ACLR
+count_reset => store[5].ACLR
+count_reset => store[6].ACLR
+count_reset => store[7].ACLR
+count_reset => store[8].ACLR
+count_reset => store[9].ACLR
+count_reset => store[10].ACLR
+count_reset => store[11].ACLR
+count_reset => store[12].ACLR
+count_reset => store[13].ACLR
+count_reset => store[14].ACLR
+count_reset => store[15].ACLR
+count_reset => store[16].ACLR
+count_reset => store[17].ACLR
+count_reset => store[18].ACLR
+count_reset => store[19].ACLR
+count_reset => store[20].ACLR
+count_reset => store[21].ACLR
+count_reset => store[22].ACLR
+count_reset => store[23].ACLR
+count_reset => store[24].ACLR
+count_reset => store[25].ACLR
+count_reset => store[26].ACLR
+count_reset => store[27].ACLR
+count_reset => store[28].ACLR
+count_reset => store[29].ACLR
+count_reset => store[30].ACLR
+count_enable => store[0].ENA
+count_enable => store[1].ENA
+count_enable => store[2].ENA
+count_enable => store[3].ENA
+count_enable => store[4].ENA
+count_enable => store[5].ENA
+count_enable => store[6].ENA
+count_enable => store[7].ENA
+count_enable => store[8].ENA
+count_enable => store[9].ENA
+count_enable => store[10].ENA
+count_enable => store[11].ENA
+count_enable => store[12].ENA
+count_enable => store[13].ENA
+count_enable => store[14].ENA
+count_enable => store[15].ENA
+count_enable => store[16].ENA
+count_enable => store[17].ENA
+count_enable => store[18].ENA
+count_enable => store[19].ENA
+count_enable => store[20].ENA
+count_enable => store[21].ENA
+count_enable => store[22].ENA
+count_enable => store[23].ENA
+count_enable => store[24].ENA
+count_enable => store[25].ENA
+count_enable => store[26].ENA
+count_enable => store[27].ENA
+count_enable => store[28].ENA
+count_enable => store[29].ENA
+count_enable => store[30].ENA
+count_input => store[0].CLK
+count_input => store[1].CLK
+count_input => store[2].CLK
+count_input => store[3].CLK
+count_input => store[4].CLK
+count_input => store[5].CLK
+count_input => store[6].CLK
+count_input => store[7].CLK
+count_input => store[8].CLK
+count_input => store[9].CLK
+count_input => store[10].CLK
+count_input => store[11].CLK
+count_input => store[12].CLK
+count_input => store[13].CLK
+count_input => store[14].CLK
+count_input => store[15].CLK
+count_input => store[16].CLK
+count_input => store[17].CLK
+count_input => store[18].CLK
+count_input => store[19].CLK
+count_input => store[20].CLK
+count_input => store[21].CLK
+count_input => store[22].CLK
+count_input => store[23].CLK
+count_input => store[24].CLK
+count_input => store[25].CLK
+count_input => store[26].CLK
+count_input => store[27].CLK
+count_input => store[28].CLK
+count_input => store[29].CLK
+count_input => store[30].CLK
+count_output[0] <= store[0].DB_MAX_OUTPUT_PORT_TYPE
+count_output[1] <= store[1].DB_MAX_OUTPUT_PORT_TYPE
+count_output[2] <= store[2].DB_MAX_OUTPUT_PORT_TYPE
+count_output[3] <= store[3].DB_MAX_OUTPUT_PORT_TYPE
+count_output[4] <= store[4].DB_MAX_OUTPUT_PORT_TYPE
+count_output[5] <= store[5].DB_MAX_OUTPUT_PORT_TYPE
+count_output[6] <= store[6].DB_MAX_OUTPUT_PORT_TYPE
+count_output[7] <= store[7].DB_MAX_OUTPUT_PORT_TYPE
+count_output[8] <= store[8].DB_MAX_OUTPUT_PORT_TYPE
+count_output[9] <= store[9].DB_MAX_OUTPUT_PORT_TYPE
+count_output[10] <= store[10].DB_MAX_OUTPUT_PORT_TYPE
+count_output[11] <= store[11].DB_MAX_OUTPUT_PORT_TYPE
+count_output[12] <= store[12].DB_MAX_OUTPUT_PORT_TYPE
+count_output[13] <= store[13].DB_MAX_OUTPUT_PORT_TYPE
+count_output[14] <= store[14].DB_MAX_OUTPUT_PORT_TYPE
+count_output[15] <= store[15].DB_MAX_OUTPUT_PORT_TYPE
+count_output[16] <= store[16].DB_MAX_OUTPUT_PORT_TYPE
+count_output[17] <= store[17].DB_MAX_OUTPUT_PORT_TYPE
+count_output[18] <= store[18].DB_MAX_OUTPUT_PORT_TYPE
+count_output[19] <= store[19].DB_MAX_OUTPUT_PORT_TYPE
+count_output[20] <= store[20].DB_MAX_OUTPUT_PORT_TYPE
+count_output[21] <= store[21].DB_MAX_OUTPUT_PORT_TYPE
+count_output[22] <= store[22].DB_MAX_OUTPUT_PORT_TYPE
+count_output[23] <= store[23].DB_MAX_OUTPUT_PORT_TYPE
+count_output[24] <= store[24].DB_MAX_OUTPUT_PORT_TYPE
+count_output[25] <= store[25].DB_MAX_OUTPUT_PORT_TYPE
+count_output[26] <= store[26].DB_MAX_OUTPUT_PORT_TYPE
+count_output[27] <= store[27].DB_MAX_OUTPUT_PORT_TYPE
+count_output[28] <= store[28].DB_MAX_OUTPUT_PORT_TYPE
+count_output[29] <= store[29].DB_MAX_OUTPUT_PORT_TYPE
+count_output[30] <= store[30].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:12:ro0
+ro_enable => my_nand2:nand_stage.a
+ro_out <= my_inverter:inverter_chain:10:u0.output
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:12:ro0|my_nand2:nand_stage
+a => nand_gate.IN0
+b => nand_gate.IN1
+output <= nand_gate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:12:ro0|my_inverter:\inverter_chain:0:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:12:ro0|my_inverter:\inverter_chain:1:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:12:ro0|my_inverter:\inverter_chain:2:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:12:ro0|my_inverter:\inverter_chain:3:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:12:ro0|my_inverter:\inverter_chain:4:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:12:ro0|my_inverter:\inverter_chain:5:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:12:ro0|my_inverter:\inverter_chain:6:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:12:ro0|my_inverter:\inverter_chain:7:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:12:ro0|my_inverter:\inverter_chain:8:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:12:ro0|my_inverter:\inverter_chain:9:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:12:ro0|my_inverter:\inverter_chain:10:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|counter:\ro_chain:12:count0
+count_reset => store[0].ACLR
+count_reset => store[1].ACLR
+count_reset => store[2].ACLR
+count_reset => store[3].ACLR
+count_reset => store[4].ACLR
+count_reset => store[5].ACLR
+count_reset => store[6].ACLR
+count_reset => store[7].ACLR
+count_reset => store[8].ACLR
+count_reset => store[9].ACLR
+count_reset => store[10].ACLR
+count_reset => store[11].ACLR
+count_reset => store[12].ACLR
+count_reset => store[13].ACLR
+count_reset => store[14].ACLR
+count_reset => store[15].ACLR
+count_reset => store[16].ACLR
+count_reset => store[17].ACLR
+count_reset => store[18].ACLR
+count_reset => store[19].ACLR
+count_reset => store[20].ACLR
+count_reset => store[21].ACLR
+count_reset => store[22].ACLR
+count_reset => store[23].ACLR
+count_reset => store[24].ACLR
+count_reset => store[25].ACLR
+count_reset => store[26].ACLR
+count_reset => store[27].ACLR
+count_reset => store[28].ACLR
+count_reset => store[29].ACLR
+count_reset => store[30].ACLR
+count_enable => store[0].ENA
+count_enable => store[1].ENA
+count_enable => store[2].ENA
+count_enable => store[3].ENA
+count_enable => store[4].ENA
+count_enable => store[5].ENA
+count_enable => store[6].ENA
+count_enable => store[7].ENA
+count_enable => store[8].ENA
+count_enable => store[9].ENA
+count_enable => store[10].ENA
+count_enable => store[11].ENA
+count_enable => store[12].ENA
+count_enable => store[13].ENA
+count_enable => store[14].ENA
+count_enable => store[15].ENA
+count_enable => store[16].ENA
+count_enable => store[17].ENA
+count_enable => store[18].ENA
+count_enable => store[19].ENA
+count_enable => store[20].ENA
+count_enable => store[21].ENA
+count_enable => store[22].ENA
+count_enable => store[23].ENA
+count_enable => store[24].ENA
+count_enable => store[25].ENA
+count_enable => store[26].ENA
+count_enable => store[27].ENA
+count_enable => store[28].ENA
+count_enable => store[29].ENA
+count_enable => store[30].ENA
+count_input => store[0].CLK
+count_input => store[1].CLK
+count_input => store[2].CLK
+count_input => store[3].CLK
+count_input => store[4].CLK
+count_input => store[5].CLK
+count_input => store[6].CLK
+count_input => store[7].CLK
+count_input => store[8].CLK
+count_input => store[9].CLK
+count_input => store[10].CLK
+count_input => store[11].CLK
+count_input => store[12].CLK
+count_input => store[13].CLK
+count_input => store[14].CLK
+count_input => store[15].CLK
+count_input => store[16].CLK
+count_input => store[17].CLK
+count_input => store[18].CLK
+count_input => store[19].CLK
+count_input => store[20].CLK
+count_input => store[21].CLK
+count_input => store[22].CLK
+count_input => store[23].CLK
+count_input => store[24].CLK
+count_input => store[25].CLK
+count_input => store[26].CLK
+count_input => store[27].CLK
+count_input => store[28].CLK
+count_input => store[29].CLK
+count_input => store[30].CLK
+count_output[0] <= store[0].DB_MAX_OUTPUT_PORT_TYPE
+count_output[1] <= store[1].DB_MAX_OUTPUT_PORT_TYPE
+count_output[2] <= store[2].DB_MAX_OUTPUT_PORT_TYPE
+count_output[3] <= store[3].DB_MAX_OUTPUT_PORT_TYPE
+count_output[4] <= store[4].DB_MAX_OUTPUT_PORT_TYPE
+count_output[5] <= store[5].DB_MAX_OUTPUT_PORT_TYPE
+count_output[6] <= store[6].DB_MAX_OUTPUT_PORT_TYPE
+count_output[7] <= store[7].DB_MAX_OUTPUT_PORT_TYPE
+count_output[8] <= store[8].DB_MAX_OUTPUT_PORT_TYPE
+count_output[9] <= store[9].DB_MAX_OUTPUT_PORT_TYPE
+count_output[10] <= store[10].DB_MAX_OUTPUT_PORT_TYPE
+count_output[11] <= store[11].DB_MAX_OUTPUT_PORT_TYPE
+count_output[12] <= store[12].DB_MAX_OUTPUT_PORT_TYPE
+count_output[13] <= store[13].DB_MAX_OUTPUT_PORT_TYPE
+count_output[14] <= store[14].DB_MAX_OUTPUT_PORT_TYPE
+count_output[15] <= store[15].DB_MAX_OUTPUT_PORT_TYPE
+count_output[16] <= store[16].DB_MAX_OUTPUT_PORT_TYPE
+count_output[17] <= store[17].DB_MAX_OUTPUT_PORT_TYPE
+count_output[18] <= store[18].DB_MAX_OUTPUT_PORT_TYPE
+count_output[19] <= store[19].DB_MAX_OUTPUT_PORT_TYPE
+count_output[20] <= store[20].DB_MAX_OUTPUT_PORT_TYPE
+count_output[21] <= store[21].DB_MAX_OUTPUT_PORT_TYPE
+count_output[22] <= store[22].DB_MAX_OUTPUT_PORT_TYPE
+count_output[23] <= store[23].DB_MAX_OUTPUT_PORT_TYPE
+count_output[24] <= store[24].DB_MAX_OUTPUT_PORT_TYPE
+count_output[25] <= store[25].DB_MAX_OUTPUT_PORT_TYPE
+count_output[26] <= store[26].DB_MAX_OUTPUT_PORT_TYPE
+count_output[27] <= store[27].DB_MAX_OUTPUT_PORT_TYPE
+count_output[28] <= store[28].DB_MAX_OUTPUT_PORT_TYPE
+count_output[29] <= store[29].DB_MAX_OUTPUT_PORT_TYPE
+count_output[30] <= store[30].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:13:ro0
+ro_enable => my_nand2:nand_stage.a
+ro_out <= my_inverter:inverter_chain:10:u0.output
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:13:ro0|my_nand2:nand_stage
+a => nand_gate.IN0
+b => nand_gate.IN1
+output <= nand_gate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:13:ro0|my_inverter:\inverter_chain:0:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:13:ro0|my_inverter:\inverter_chain:1:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:13:ro0|my_inverter:\inverter_chain:2:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:13:ro0|my_inverter:\inverter_chain:3:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:13:ro0|my_inverter:\inverter_chain:4:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:13:ro0|my_inverter:\inverter_chain:5:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:13:ro0|my_inverter:\inverter_chain:6:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:13:ro0|my_inverter:\inverter_chain:7:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:13:ro0|my_inverter:\inverter_chain:8:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:13:ro0|my_inverter:\inverter_chain:9:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:13:ro0|my_inverter:\inverter_chain:10:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|counter:\ro_chain:13:count0
+count_reset => store[0].ACLR
+count_reset => store[1].ACLR
+count_reset => store[2].ACLR
+count_reset => store[3].ACLR
+count_reset => store[4].ACLR
+count_reset => store[5].ACLR
+count_reset => store[6].ACLR
+count_reset => store[7].ACLR
+count_reset => store[8].ACLR
+count_reset => store[9].ACLR
+count_reset => store[10].ACLR
+count_reset => store[11].ACLR
+count_reset => store[12].ACLR
+count_reset => store[13].ACLR
+count_reset => store[14].ACLR
+count_reset => store[15].ACLR
+count_reset => store[16].ACLR
+count_reset => store[17].ACLR
+count_reset => store[18].ACLR
+count_reset => store[19].ACLR
+count_reset => store[20].ACLR
+count_reset => store[21].ACLR
+count_reset => store[22].ACLR
+count_reset => store[23].ACLR
+count_reset => store[24].ACLR
+count_reset => store[25].ACLR
+count_reset => store[26].ACLR
+count_reset => store[27].ACLR
+count_reset => store[28].ACLR
+count_reset => store[29].ACLR
+count_reset => store[30].ACLR
+count_enable => store[0].ENA
+count_enable => store[1].ENA
+count_enable => store[2].ENA
+count_enable => store[3].ENA
+count_enable => store[4].ENA
+count_enable => store[5].ENA
+count_enable => store[6].ENA
+count_enable => store[7].ENA
+count_enable => store[8].ENA
+count_enable => store[9].ENA
+count_enable => store[10].ENA
+count_enable => store[11].ENA
+count_enable => store[12].ENA
+count_enable => store[13].ENA
+count_enable => store[14].ENA
+count_enable => store[15].ENA
+count_enable => store[16].ENA
+count_enable => store[17].ENA
+count_enable => store[18].ENA
+count_enable => store[19].ENA
+count_enable => store[20].ENA
+count_enable => store[21].ENA
+count_enable => store[22].ENA
+count_enable => store[23].ENA
+count_enable => store[24].ENA
+count_enable => store[25].ENA
+count_enable => store[26].ENA
+count_enable => store[27].ENA
+count_enable => store[28].ENA
+count_enable => store[29].ENA
+count_enable => store[30].ENA
+count_input => store[0].CLK
+count_input => store[1].CLK
+count_input => store[2].CLK
+count_input => store[3].CLK
+count_input => store[4].CLK
+count_input => store[5].CLK
+count_input => store[6].CLK
+count_input => store[7].CLK
+count_input => store[8].CLK
+count_input => store[9].CLK
+count_input => store[10].CLK
+count_input => store[11].CLK
+count_input => store[12].CLK
+count_input => store[13].CLK
+count_input => store[14].CLK
+count_input => store[15].CLK
+count_input => store[16].CLK
+count_input => store[17].CLK
+count_input => store[18].CLK
+count_input => store[19].CLK
+count_input => store[20].CLK
+count_input => store[21].CLK
+count_input => store[22].CLK
+count_input => store[23].CLK
+count_input => store[24].CLK
+count_input => store[25].CLK
+count_input => store[26].CLK
+count_input => store[27].CLK
+count_input => store[28].CLK
+count_input => store[29].CLK
+count_input => store[30].CLK
+count_output[0] <= store[0].DB_MAX_OUTPUT_PORT_TYPE
+count_output[1] <= store[1].DB_MAX_OUTPUT_PORT_TYPE
+count_output[2] <= store[2].DB_MAX_OUTPUT_PORT_TYPE
+count_output[3] <= store[3].DB_MAX_OUTPUT_PORT_TYPE
+count_output[4] <= store[4].DB_MAX_OUTPUT_PORT_TYPE
+count_output[5] <= store[5].DB_MAX_OUTPUT_PORT_TYPE
+count_output[6] <= store[6].DB_MAX_OUTPUT_PORT_TYPE
+count_output[7] <= store[7].DB_MAX_OUTPUT_PORT_TYPE
+count_output[8] <= store[8].DB_MAX_OUTPUT_PORT_TYPE
+count_output[9] <= store[9].DB_MAX_OUTPUT_PORT_TYPE
+count_output[10] <= store[10].DB_MAX_OUTPUT_PORT_TYPE
+count_output[11] <= store[11].DB_MAX_OUTPUT_PORT_TYPE
+count_output[12] <= store[12].DB_MAX_OUTPUT_PORT_TYPE
+count_output[13] <= store[13].DB_MAX_OUTPUT_PORT_TYPE
+count_output[14] <= store[14].DB_MAX_OUTPUT_PORT_TYPE
+count_output[15] <= store[15].DB_MAX_OUTPUT_PORT_TYPE
+count_output[16] <= store[16].DB_MAX_OUTPUT_PORT_TYPE
+count_output[17] <= store[17].DB_MAX_OUTPUT_PORT_TYPE
+count_output[18] <= store[18].DB_MAX_OUTPUT_PORT_TYPE
+count_output[19] <= store[19].DB_MAX_OUTPUT_PORT_TYPE
+count_output[20] <= store[20].DB_MAX_OUTPUT_PORT_TYPE
+count_output[21] <= store[21].DB_MAX_OUTPUT_PORT_TYPE
+count_output[22] <= store[22].DB_MAX_OUTPUT_PORT_TYPE
+count_output[23] <= store[23].DB_MAX_OUTPUT_PORT_TYPE
+count_output[24] <= store[24].DB_MAX_OUTPUT_PORT_TYPE
+count_output[25] <= store[25].DB_MAX_OUTPUT_PORT_TYPE
+count_output[26] <= store[26].DB_MAX_OUTPUT_PORT_TYPE
+count_output[27] <= store[27].DB_MAX_OUTPUT_PORT_TYPE
+count_output[28] <= store[28].DB_MAX_OUTPUT_PORT_TYPE
+count_output[29] <= store[29].DB_MAX_OUTPUT_PORT_TYPE
+count_output[30] <= store[30].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:14:ro0
+ro_enable => my_nand2:nand_stage.a
+ro_out <= my_inverter:inverter_chain:10:u0.output
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:14:ro0|my_nand2:nand_stage
+a => nand_gate.IN0
+b => nand_gate.IN1
+output <= nand_gate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:14:ro0|my_inverter:\inverter_chain:0:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:14:ro0|my_inverter:\inverter_chain:1:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:14:ro0|my_inverter:\inverter_chain:2:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:14:ro0|my_inverter:\inverter_chain:3:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:14:ro0|my_inverter:\inverter_chain:4:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:14:ro0|my_inverter:\inverter_chain:5:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:14:ro0|my_inverter:\inverter_chain:6:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:14:ro0|my_inverter:\inverter_chain:7:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:14:ro0|my_inverter:\inverter_chain:8:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:14:ro0|my_inverter:\inverter_chain:9:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:14:ro0|my_inverter:\inverter_chain:10:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|counter:\ro_chain:14:count0
+count_reset => store[0].ACLR
+count_reset => store[1].ACLR
+count_reset => store[2].ACLR
+count_reset => store[3].ACLR
+count_reset => store[4].ACLR
+count_reset => store[5].ACLR
+count_reset => store[6].ACLR
+count_reset => store[7].ACLR
+count_reset => store[8].ACLR
+count_reset => store[9].ACLR
+count_reset => store[10].ACLR
+count_reset => store[11].ACLR
+count_reset => store[12].ACLR
+count_reset => store[13].ACLR
+count_reset => store[14].ACLR
+count_reset => store[15].ACLR
+count_reset => store[16].ACLR
+count_reset => store[17].ACLR
+count_reset => store[18].ACLR
+count_reset => store[19].ACLR
+count_reset => store[20].ACLR
+count_reset => store[21].ACLR
+count_reset => store[22].ACLR
+count_reset => store[23].ACLR
+count_reset => store[24].ACLR
+count_reset => store[25].ACLR
+count_reset => store[26].ACLR
+count_reset => store[27].ACLR
+count_reset => store[28].ACLR
+count_reset => store[29].ACLR
+count_reset => store[30].ACLR
+count_enable => store[0].ENA
+count_enable => store[1].ENA
+count_enable => store[2].ENA
+count_enable => store[3].ENA
+count_enable => store[4].ENA
+count_enable => store[5].ENA
+count_enable => store[6].ENA
+count_enable => store[7].ENA
+count_enable => store[8].ENA
+count_enable => store[9].ENA
+count_enable => store[10].ENA
+count_enable => store[11].ENA
+count_enable => store[12].ENA
+count_enable => store[13].ENA
+count_enable => store[14].ENA
+count_enable => store[15].ENA
+count_enable => store[16].ENA
+count_enable => store[17].ENA
+count_enable => store[18].ENA
+count_enable => store[19].ENA
+count_enable => store[20].ENA
+count_enable => store[21].ENA
+count_enable => store[22].ENA
+count_enable => store[23].ENA
+count_enable => store[24].ENA
+count_enable => store[25].ENA
+count_enable => store[26].ENA
+count_enable => store[27].ENA
+count_enable => store[28].ENA
+count_enable => store[29].ENA
+count_enable => store[30].ENA
+count_input => store[0].CLK
+count_input => store[1].CLK
+count_input => store[2].CLK
+count_input => store[3].CLK
+count_input => store[4].CLK
+count_input => store[5].CLK
+count_input => store[6].CLK
+count_input => store[7].CLK
+count_input => store[8].CLK
+count_input => store[9].CLK
+count_input => store[10].CLK
+count_input => store[11].CLK
+count_input => store[12].CLK
+count_input => store[13].CLK
+count_input => store[14].CLK
+count_input => store[15].CLK
+count_input => store[16].CLK
+count_input => store[17].CLK
+count_input => store[18].CLK
+count_input => store[19].CLK
+count_input => store[20].CLK
+count_input => store[21].CLK
+count_input => store[22].CLK
+count_input => store[23].CLK
+count_input => store[24].CLK
+count_input => store[25].CLK
+count_input => store[26].CLK
+count_input => store[27].CLK
+count_input => store[28].CLK
+count_input => store[29].CLK
+count_input => store[30].CLK
+count_output[0] <= store[0].DB_MAX_OUTPUT_PORT_TYPE
+count_output[1] <= store[1].DB_MAX_OUTPUT_PORT_TYPE
+count_output[2] <= store[2].DB_MAX_OUTPUT_PORT_TYPE
+count_output[3] <= store[3].DB_MAX_OUTPUT_PORT_TYPE
+count_output[4] <= store[4].DB_MAX_OUTPUT_PORT_TYPE
+count_output[5] <= store[5].DB_MAX_OUTPUT_PORT_TYPE
+count_output[6] <= store[6].DB_MAX_OUTPUT_PORT_TYPE
+count_output[7] <= store[7].DB_MAX_OUTPUT_PORT_TYPE
+count_output[8] <= store[8].DB_MAX_OUTPUT_PORT_TYPE
+count_output[9] <= store[9].DB_MAX_OUTPUT_PORT_TYPE
+count_output[10] <= store[10].DB_MAX_OUTPUT_PORT_TYPE
+count_output[11] <= store[11].DB_MAX_OUTPUT_PORT_TYPE
+count_output[12] <= store[12].DB_MAX_OUTPUT_PORT_TYPE
+count_output[13] <= store[13].DB_MAX_OUTPUT_PORT_TYPE
+count_output[14] <= store[14].DB_MAX_OUTPUT_PORT_TYPE
+count_output[15] <= store[15].DB_MAX_OUTPUT_PORT_TYPE
+count_output[16] <= store[16].DB_MAX_OUTPUT_PORT_TYPE
+count_output[17] <= store[17].DB_MAX_OUTPUT_PORT_TYPE
+count_output[18] <= store[18].DB_MAX_OUTPUT_PORT_TYPE
+count_output[19] <= store[19].DB_MAX_OUTPUT_PORT_TYPE
+count_output[20] <= store[20].DB_MAX_OUTPUT_PORT_TYPE
+count_output[21] <= store[21].DB_MAX_OUTPUT_PORT_TYPE
+count_output[22] <= store[22].DB_MAX_OUTPUT_PORT_TYPE
+count_output[23] <= store[23].DB_MAX_OUTPUT_PORT_TYPE
+count_output[24] <= store[24].DB_MAX_OUTPUT_PORT_TYPE
+count_output[25] <= store[25].DB_MAX_OUTPUT_PORT_TYPE
+count_output[26] <= store[26].DB_MAX_OUTPUT_PORT_TYPE
+count_output[27] <= store[27].DB_MAX_OUTPUT_PORT_TYPE
+count_output[28] <= store[28].DB_MAX_OUTPUT_PORT_TYPE
+count_output[29] <= store[29].DB_MAX_OUTPUT_PORT_TYPE
+count_output[30] <= store[30].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:15:ro0
+ro_enable => my_nand2:nand_stage.a
+ro_out <= my_inverter:inverter_chain:10:u0.output
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:15:ro0|my_nand2:nand_stage
+a => nand_gate.IN0
+b => nand_gate.IN1
+output <= nand_gate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:15:ro0|my_inverter:\inverter_chain:0:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:15:ro0|my_inverter:\inverter_chain:1:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:15:ro0|my_inverter:\inverter_chain:2:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:15:ro0|my_inverter:\inverter_chain:3:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:15:ro0|my_inverter:\inverter_chain:4:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:15:ro0|my_inverter:\inverter_chain:5:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:15:ro0|my_inverter:\inverter_chain:6:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:15:ro0|my_inverter:\inverter_chain:7:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:15:ro0|my_inverter:\inverter_chain:8:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:15:ro0|my_inverter:\inverter_chain:9:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|ring_oscillator:\ro_chain:15:ro0|my_inverter:\inverter_chain:10:u0
+input => output.DATAIN
+output <= input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|project1_ads|ro_puf:my_ro_puf|counter:\ro_chain:15:count0
+count_reset => store[0].ACLR
+count_reset => store[1].ACLR
+count_reset => store[2].ACLR
+count_reset => store[3].ACLR
+count_reset => store[4].ACLR
+count_reset => store[5].ACLR
+count_reset => store[6].ACLR
+count_reset => store[7].ACLR
+count_reset => store[8].ACLR
+count_reset => store[9].ACLR
+count_reset => store[10].ACLR
+count_reset => store[11].ACLR
+count_reset => store[12].ACLR
+count_reset => store[13].ACLR
+count_reset => store[14].ACLR
+count_reset => store[15].ACLR
+count_reset => store[16].ACLR
+count_reset => store[17].ACLR
+count_reset => store[18].ACLR
+count_reset => store[19].ACLR
+count_reset => store[20].ACLR
+count_reset => store[21].ACLR
+count_reset => store[22].ACLR
+count_reset => store[23].ACLR
+count_reset => store[24].ACLR
+count_reset => store[25].ACLR
+count_reset => store[26].ACLR
+count_reset => store[27].ACLR
+count_reset => store[28].ACLR
+count_reset => store[29].ACLR
+count_reset => store[30].ACLR
+count_enable => store[0].ENA
+count_enable => store[1].ENA
+count_enable => store[2].ENA
+count_enable => store[3].ENA
+count_enable => store[4].ENA
+count_enable => store[5].ENA
+count_enable => store[6].ENA
+count_enable => store[7].ENA
+count_enable => store[8].ENA
+count_enable => store[9].ENA
+count_enable => store[10].ENA
+count_enable => store[11].ENA
+count_enable => store[12].ENA
+count_enable => store[13].ENA
+count_enable => store[14].ENA
+count_enable => store[15].ENA
+count_enable => store[16].ENA
+count_enable => store[17].ENA
+count_enable => store[18].ENA
+count_enable => store[19].ENA
+count_enable => store[20].ENA
+count_enable => store[21].ENA
+count_enable => store[22].ENA
+count_enable => store[23].ENA
+count_enable => store[24].ENA
+count_enable => store[25].ENA
+count_enable => store[26].ENA
+count_enable => store[27].ENA
+count_enable => store[28].ENA
+count_enable => store[29].ENA
+count_enable => store[30].ENA
+count_input => store[0].CLK
+count_input => store[1].CLK
+count_input => store[2].CLK
+count_input => store[3].CLK
+count_input => store[4].CLK
+count_input => store[5].CLK
+count_input => store[6].CLK
+count_input => store[7].CLK
+count_input => store[8].CLK
+count_input => store[9].CLK
+count_input => store[10].CLK
+count_input => store[11].CLK
+count_input => store[12].CLK
+count_input => store[13].CLK
+count_input => store[14].CLK
+count_input => store[15].CLK
+count_input => store[16].CLK
+count_input => store[17].CLK
+count_input => store[18].CLK
+count_input => store[19].CLK
+count_input => store[20].CLK
+count_input => store[21].CLK
+count_input => store[22].CLK
+count_input => store[23].CLK
+count_input => store[24].CLK
+count_input => store[25].CLK
+count_input => store[26].CLK
+count_input => store[27].CLK
+count_input => store[28].CLK
+count_input => store[29].CLK
+count_input => store[30].CLK
+count_output[0] <= store[0].DB_MAX_OUTPUT_PORT_TYPE
+count_output[1] <= store[1].DB_MAX_OUTPUT_PORT_TYPE
+count_output[2] <= store[2].DB_MAX_OUTPUT_PORT_TYPE
+count_output[3] <= store[3].DB_MAX_OUTPUT_PORT_TYPE
+count_output[4] <= store[4].DB_MAX_OUTPUT_PORT_TYPE
+count_output[5] <= store[5].DB_MAX_OUTPUT_PORT_TYPE
+count_output[6] <= store[6].DB_MAX_OUTPUT_PORT_TYPE
+count_output[7] <= store[7].DB_MAX_OUTPUT_PORT_TYPE
+count_output[8] <= store[8].DB_MAX_OUTPUT_PORT_TYPE
+count_output[9] <= store[9].DB_MAX_OUTPUT_PORT_TYPE
+count_output[10] <= store[10].DB_MAX_OUTPUT_PORT_TYPE
+count_output[11] <= store[11].DB_MAX_OUTPUT_PORT_TYPE
+count_output[12] <= store[12].DB_MAX_OUTPUT_PORT_TYPE
+count_output[13] <= store[13].DB_MAX_OUTPUT_PORT_TYPE
+count_output[14] <= store[14].DB_MAX_OUTPUT_PORT_TYPE
+count_output[15] <= store[15].DB_MAX_OUTPUT_PORT_TYPE
+count_output[16] <= store[16].DB_MAX_OUTPUT_PORT_TYPE
+count_output[17] <= store[17].DB_MAX_OUTPUT_PORT_TYPE
+count_output[18] <= store[18].DB_MAX_OUTPUT_PORT_TYPE
+count_output[19] <= store[19].DB_MAX_OUTPUT_PORT_TYPE
+count_output[20] <= store[20].DB_MAX_OUTPUT_PORT_TYPE
+count_output[21] <= store[21].DB_MAX_OUTPUT_PORT_TYPE
+count_output[22] <= store[22].DB_MAX_OUTPUT_PORT_TYPE
+count_output[23] <= store[23].DB_MAX_OUTPUT_PORT_TYPE
+count_output[24] <= store[24].DB_MAX_OUTPUT_PORT_TYPE
+count_output[25] <= store[25].DB_MAX_OUTPUT_PORT_TYPE
+count_output[26] <= store[26].DB_MAX_OUTPUT_PORT_TYPE
+count_output[27] <= store[27].DB_MAX_OUTPUT_PORT_TYPE
+count_output[28] <= store[28].DB_MAX_OUTPUT_PORT_TYPE
+count_output[29] <= store[29].DB_MAX_OUTPUT_PORT_TYPE
+count_output[30] <= store[30].DB_MAX_OUTPUT_PORT_TYPE
+
+

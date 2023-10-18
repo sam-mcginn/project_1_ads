@@ -9,7 +9,7 @@ use work.project1_pkg.all;
 entity ring_oscillator is
 	generic (
 		-- one NAND gate + (num_stages-1) inverters
-		num_stages: natural := 13 		-- FIX - num_stages must be negative
+		num_stages: natural := 13
 	);
 	port (
 		ro_enable: in std_logic;
@@ -20,7 +20,14 @@ end entity ring_oscillator;
 architecture ro_arch of ring_oscillator is
 	signal ro_nodes: std_logic_vector(0 to num_stages-1);
 begin
+	-- Check for invalid num_stages input
+	assert num_stages mod 2 = 0
+		report "ro_length must be an odd number"
+		severity failure;
+	
+	-- Drive output from output of last inverter
 	ro_out <= ro_nodes(num_stages-1);
+	
 	-- one NAND gate
 	nand_stage: my_nand2
 		port map (
