@@ -23,12 +23,14 @@ architecture counter_arch of counter is
 begin
 	count_output <= store;
 	
-	update_count: process(count_input, count_enable, count_reset) is
+	update_count: process(count_input, count_reset) is
 	begin
 		if count_reset='0' then
 			store <= 0;
-		elsif rising_edge(count_input) and count_enable='1'then
-			store <= store + 1;
+		elsif rising_edge(count_input) then
+			if count_enable='1' then
+				store <= store + 1;
+			end if;
 		end if;
 	end process update_count;
 		

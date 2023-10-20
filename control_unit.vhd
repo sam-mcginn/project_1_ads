@@ -29,7 +29,7 @@ entity control_unit is
 			-- Enable signal from control unit to counters:
 			puf_enable: out std_logic;
 			-- Count output from control unit to counters:
-			challenge_out: out std_logic_vector(0 to challenge_bits);
+			challenge_out: out std_logic_vector(2*challenge_bits - 1 downto 0);
 			-- Response output to store
 			store_response: out std_logic
 		);

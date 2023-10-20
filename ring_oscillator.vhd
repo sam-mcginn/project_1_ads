@@ -19,9 +19,11 @@ end entity ring_oscillator;
 
 architecture ro_arch of ring_oscillator is
 	signal ro_nodes: std_logic_vector(0 to num_stages-1);
+	attribute keep: boolean;
+	attribute keep of ro_nodes: signal is true;
 begin
 	-- Check for invalid num_stages input
-	assert num_stages mod 2 = 0
+	assert num_stages mod 2 = 1
 		report "ro_length must be an odd number"
 		severity failure;
 	

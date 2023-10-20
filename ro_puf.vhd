@@ -9,11 +9,11 @@ use work.project1_pkg.all;
 entity ro_puf is
 	generic (
 		-- RO chain length
-		ro_length: natural := 12;
+		ro_length: natural := 13;
 		-- Number of RO chains
 		ro_count: natural := 16;
 		-- Challenge bit width
-		challenge_bit_width: natural := 8
+		challenge_bit_width: natural := 6
 	);
 	port (
 		-- Asynchronous active-low reset for counters
@@ -22,7 +22,7 @@ entity ro_puf is
 		enable: in std_logic;
 		-- PUF challenge input:
 		-- lower bits select a counter from first group of ROs, upper bits select from second group
-		challenge: in std_logic_vector(challenge_bit_width downto 0); -- FIX - need ro_count/2 -1 downto 0?
+		challenge: in std_logic_vector(challenge_bit_width - 1 downto 0); -- FIX - need ro_count/2 -1 downto 0?
 		-- PUF response output:
 		-- returns 1 if value of first group counter is less than second, 0 if second < first
 		response: out std_logic
@@ -34,6 +34,11 @@ architecture ro_puf_arch of ro_puf is
 	signal ro_value: std_logic_vector(0 to ro_count-1);
 	signal count_value: counter_value_type(0 to ro_count-1);
 	signal ro_first_select: std_logic_vector(0 to ro_count/2);
+	
+	signal select_vect_a: std_logic_vector(challenge_bit_width/2 - 1 downto 0);
+	signal select_vect_b: std_logic_vector(challenge_bit_width/2 - 1 downto 0);
+	signal counter_val_a: natural;
+	signal counter_val_b: natural;
 	
 	-- Function to check if a number is a power of two
 	function is_power_two ( n: in positive ) return boolean
@@ -55,6 +60,14 @@ begin
 		report "ro_count must be a power of two"
 		severity failure;
 
+	select_vect_a <= challenge(challenge_bit_width/2 - 1 downto 0);
+	select_vect_b <= challenge(challenge_bit_width - 1 downto challenge_bit_width/2);
+	
+	counter_val_a <= count_value(to_integer(unsigned(select_vect_a)));
+	counter_val_b <= count_value(ro_count/2 + to_integer(unsigned(select_vect_b)));
+	
+	response <= '1' when counter_val_a > counter_val_b else '0';
+	
 	ro_chain: for i in 0 to ro_count-1 generate
 	-- first group: ro_count/2 - 1 to 0
 	-- second group: ro_count/2 to ro_count-1

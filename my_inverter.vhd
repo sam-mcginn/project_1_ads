@@ -11,12 +11,13 @@ end entity my_inverter;
 
 architecture inverter_arch of my_inverter is
 begin
-	invert_val: process(input) is
-	begin
-		if input='0' then
-			output <= '1';
-		else
-			output <= '0';
-		end if;
-	end process invert_val;
+	output <= not input;
+	--invert_val: process(input) is
+	--begin
+	--	if input='0' then
+	--		output <= '1';
+	--	else
+	--		output <= '0';
+	--	end if;
+	--end process invert_val;
 end architecture inverter_arch;

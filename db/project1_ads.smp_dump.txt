@@ -1,0 +1,10 @@
+
+State Machine - |project1_ads|control_unit:ctrl0|state
+Name state.all_done state.store state.next_challenge state.disable state.wait_time state.enable_state state.reset_state 
+state.reset_state 0 0 0 0 0 0 0 
+state.enable_state 0 0 0 0 0 1 1 
+state.wait_time 0 0 0 0 1 0 1 
+state.disable 0 0 0 1 0 0 1 
+state.next_challenge 0 0 1 0 0 0 1 
+state.store 0 1 0 0 0 0 1 
+state.all_done 1 0 0 0 0 0 1 

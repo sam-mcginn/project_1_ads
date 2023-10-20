@@ -39,7 +39,7 @@ package project1_pkg is
 			-- Number of RO chains
 			ro_count: natural := 16;
 			-- Challenge bit width
-			challenge_bit_width: natural := 8
+			challenge_bit_width: natural := 6
 		);
 		port (
 			-- Asynchronous active-low reset for counters
@@ -47,7 +47,7 @@ package project1_pkg is
 			-- Active-high counters enable signal
 			enable: in std_logic;
 			-- PUF challenge input
-			challenge: in std_logic_vector(challenge_bit_width downto 0); -- FIX - need ro_count/2 -1 downto 0?
+			challenge: in std_logic_vector(challenge_bit_width-1 downto 0); -- FIX - need ro_count/2 -1 downto 0?
 			-- PUF response output
 			response: out std_logic
 		);
@@ -73,7 +73,7 @@ package project1_pkg is
 			-- Time to pass before probing response  of ro_puf entity (in us):
 			probe_delay: positive := 500;
 			-- Challenge input size
-			challenge_bits: positive := 6
+			challenge_bits: positive := 3
 		);
 		port (
 			-- System reset:
@@ -89,11 +89,21 @@ package project1_pkg is
 			-- Enable signal from control unit to counters:
 			puf_enable: out std_logic;
 			-- Count output from control unit to counters:
-			challenge_out: out std_logic_vector(0 to challenge_bits);
+			challenge_out: out std_logic_vector(2*challenge_bits - 1 downto 0);
 			-- Response output to store
 			store_response: out std_logic
 		);
 	end component control_unit;
+	
+	component block_memory
+		PORT (
+			address		: IN STD_LOGIC_VECTOR (5 DOWNTO 0);
+			clock		: IN STD_LOGIC  := '1';
+			data		: IN STD_LOGIC_VECTOR (0 DOWNTO 0);
+			wren		: IN STD_LOGIC ;
+			q		: OUT STD_LOGIC_VECTOR (0 DOWNTO 0)
+		);
+	end component;
 	
 end package project1_pkg;
 
