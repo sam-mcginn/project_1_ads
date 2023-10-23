@@ -1,5 +1,5 @@
 Assembler report for project1_ads
-Fri Oct 20 13:29:03 2023
+Mon Oct 23 16:54:19 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -39,7 +39,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Oct 20 13:29:03 2023 ;
+; Assembler Status      ; Successful - Mon Oct 23 16:54:19 2023 ;
 ; Revision Name         ; project1_ads                          ;
 ; Top-level Entity Name ; project1_ads                          ;
 ; Family                ; MAX 10                                ;
@@ -109,8 +109,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+---------------------------+
 ; Option         ; Setting                   ;
 +----------------+---------------------------+
-; JTAG usercode  ; 0x00314645                ;
-; Checksum       ; 0x00314645                ;
+; JTAG usercode  ; 0x0031A129                ;
+; Checksum       ; 0x0031A129                ;
 +----------------+---------------------------+
 
 
@@ -120,14 +120,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Fri Oct 20 13:28:59 2023
+    Info: Processing started: Mon Oct 23 16:54:15 2023
 Info: Command: quartus_asm --read_settings_files=on --write_settings_files=off project1_ads -c project1_ads
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 396 megabytes
-    Info: Processing ended: Fri Oct 20 13:29:03 2023
+    Info: Peak virtual memory: 384 megabytes
+    Info: Processing ended: Mon Oct 23 16:54:19 2023
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 

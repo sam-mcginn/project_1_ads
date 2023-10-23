@@ -1,0 +1,19 @@
+# ro_puf:my_ro_puf|ring_oscillator:\ro_chain:13:ro0|ro_nodes[1]
+
+proc compute_x { chain } {
+	return [ expr 54 + (${chain} % 8) ]
+}
+
+proc compute_y { chain } {
+	return [ expr 53 - (${chain} / 8) ] 
+}
+
+for { set ro_chain 0 } { ${ro_chain} < 16} { incr ro_chain } {
+	for { set ro_link 0 } { ${ro_link} < 13 } { incr ro_link } {
+		set x_coord [ compute_x ${ro_chain} ]
+		set y_coord [ compute_y ${ro_chain} ]
+		set n_coord [ expr 2 * ${ro_link} ]
+		set_location_assignment "ro_puf:my_ro_puf|ring_oscillator:\\ro_chain:${ro_chain}:ro0|ro_nodes\[${ro_link}\]" \
+			-to LAB_X${x_coord}_Y${y_coord}_N${n_coord}
+	}
+}

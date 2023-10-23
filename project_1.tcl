@@ -72,3 +72,4 @@ if {$make_assignments} {
 		project_close
 	}
 }
+

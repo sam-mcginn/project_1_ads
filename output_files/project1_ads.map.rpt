@@ -1,5 +1,5 @@
 Analysis & Synthesis report for project1_ads
-Fri Oct 20 13:28:33 2023
+Mon Oct 23 16:51:31 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -89,7 +89,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Oct 20 13:28:32 2023          ;
+; Analysis & Synthesis Status        ; Successful - Mon Oct 23 16:51:31 2023          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; project1_ads                                   ;
 ; Top-level Entity Name              ; project1_ads                                   ;
@@ -1318,7 +1318,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -1328,7 +1328,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Fri Oct 20 13:28:08 2023
+    Info: Processing started: Mon Oct 23 16:51:03 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off project1_ads -c project1_ads
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1441,7 +1441,7 @@ Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "bloc
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "block_memory:block_memory_inst|altsyncram:altsyncram_component|altsyncram_35r3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: /home/smcginn-adsd/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
 Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "block_memory:block_memory_inst|altsyncram:altsyncram_component|altsyncram_35r3:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr" File: /home/smcginn-adsd/intelFPGA_lite/22.1std/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 828
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2023.10.20.13:28:22 Progress: Loading sld84b3a435/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2023.10.23.16:51:18 Progress: Loading sld84b3a435/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1666,9 +1666,9 @@ Info (21057): Implemented 1283 device resources after synthesis - the final reso
     Info (21061): Implemented 1274 logic cells
     Info (21064): Implemented 1 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 464 megabytes
-    Info: Processing ended: Fri Oct 20 13:28:33 2023
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:45
+    Info: Peak virtual memory: 458 megabytes
+    Info: Processing ended: Mon Oct 23 16:51:31 2023
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:50
 
 
